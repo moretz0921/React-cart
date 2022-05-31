@@ -39,7 +39,7 @@ function App() {
   const prev = firstNumber - 1;
 
   const dispatch = useDispatch();
-  const { isLoading, currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector((state) => state.user);
 
   useEffect(() => {
     const fetchProductData = async () => {
