@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ReactComponent as PrevIcon } from '../assets/images/prev.svg';
-import { ReactComponent as NextIcon } from '../assets/images/next.svg';
+import { ReactComponent as PrevIcon } from '../../assets/images/prev.svg';
+import { ReactComponent as NextIcon } from '../../assets/images/next.svg';
 
 function Pagination({
   currentPage,

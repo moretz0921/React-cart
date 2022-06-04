@@ -88,9 +88,12 @@ function Login() {
 export default Login;
 
 const LoginWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 340px;
+  height: 100vh;
   margin: 0 auto;
-  padding-top: 90px;
 
   > h3 {
     margin-bottom: 20px;

@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import CartIcon from '../../assets/images/product_cart.svg';
 import theme from '../../styles/theme';
+import Modal from '../UI/Modal';
 
 function ProductList({ productItems, setCartItems, cartItems }) {
+  const [currentCart, setCurrentCart] = useState(null);
+  const navigate = useNavigate();
+
+  const handleDetailPage = (currentIdx) => {
+    navigate(`/detail/${currentIdx}`);
+  };
+
+  const handleClose = () => {
+    setCurrentCart(null);
+  };
+
+  // 카트에 넣기
   const handleAddProduct = (idx) => {
     const currentProduct = productItems[idx];
     const checkedIdx = cartItems.findIndex(
@@ -21,22 +35,34 @@ function ProductList({ productItems, setCartItems, cartItems }) {
     }
   };
 
+  /* onClick={() => handleAddProduct(idx)}  id, name, imgSrc, price */
+
   return (
     <Product>
-      {productItems.map(({ id, name, imgSrc, price }, idx) => {
-        return (
-          <ProductItem key={id} onClick={() => handleAddProduct(idx)}>
-            <div className="img-wrap">
-              <img src={imgSrc} alt="" />
+      {currentCart && <Backdrop onClick={handleClose}></Backdrop>}
 
-              <div className="cart-icon">
+      {currentCart && (
+        <Modal currentCart={currentCart} setCurrentCart={setCurrentCart} />
+      )}
+
+      {productItems.map((item, idx) => {
+        return (
+          <ProductItem key={item.id}>
+            <div className="img-wrap">
+              <img
+                src={item.imgSrc}
+                alt=""
+                onClick={() => handleDetailPage(item.id)}
+              />
+
+              <div className="cart-icon" onClick={() => setCurrentCart(item)}>
                 <img src={CartIcon} />
               </div>
             </div>
 
             <div className="desc-wrap">
-              <h3>{name}</h3>
-              <p>{price.toLocaleString()}원</p>
+              <h3>{item.name}</h3>
+              <p>{item.price.toLocaleString()}원</p>
             </div>
           </ProductItem>
         );
@@ -100,4 +126,14 @@ const ProductItem = styled.li`
   @media ${theme.device.iphone} {
     flex: 0 0 100%;
   }
+`;
+
+const Backdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
 `;

@@ -152,9 +152,12 @@ function Join() {
 export default Join;
 
 const Login = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 340px;
+  height: 100vh;
   margin: 0 auto;
-  padding-top: 90px;
 
   > h3 {
     margin-bottom: 20px;

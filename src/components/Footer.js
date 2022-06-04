@@ -102,7 +102,7 @@ const ScrollWrap = styled.button`
   position: fixed;
   bottom: 70px;
   right: 20px;
-  z-index: 10;
+  z-index: 3000;
   cursor: pointer;
 
   &.topBtn {

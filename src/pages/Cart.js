@@ -51,7 +51,6 @@ const CartWrap = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 500px;
-  height: 100vh;
   margin: 0 auto;
   margin-bottom: 50px;
 
