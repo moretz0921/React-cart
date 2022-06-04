@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ProductList from '../components/Product/ProductList';
-import Pagination from '../components/Pagination';
+import Pagination from '../components/UI/Pagination';
 import InnerContainer from '../components/Layout';
 
 /*

@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Main from './pages/Main';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
+import Detail from './pages/Detail';
 
 function App() {
   const initialCartItem = localStorage.getItem('cartState')
@@ -93,6 +94,7 @@ function App() {
             />
           }
         />
+        <Route path="/detail/:id" element={<Detail />} />
         <Route
           path="/cart"
           element={<Cart cartItems={cartItems} setCartItems={setCartItems} />}

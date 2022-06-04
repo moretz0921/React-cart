@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import Item from './UI/Item';
-import Button from './UI/Button';
+import Item from './Item';
+import Button from './Button';
 
 function Carousel() {
   const totalItems = 5;
@@ -46,7 +46,7 @@ function Carousel() {
 
       return (
         <Item
-          src={require(`../assets/images/slider1.png`)}
+          src={require(`../../assets/images/slider1.png`)}
           key={key}
           active={index === current}
           prev={index === prev}
