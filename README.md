@@ -29,6 +29,8 @@
 - 장바구니 버튼 클릭시 팝업 오픈 
 
 #### 3. 장바구니 페이지 기능 
+![장바구니](https://user-images.githubusercontent.com/53929795/172033625-b2d15c5e-1160-4b0a-908b-e3aece1004fd.png)
+
 - 상품 목록 렌더링
 : map 메서드를 이용해 목록 렌더링
 
