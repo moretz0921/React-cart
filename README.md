@@ -8,6 +8,8 @@
 
 ### 기능 설명
 #### 1. 회원가입 & 로그인 기능 
+![회원가잊](https://user-images.githubusercontent.com/53929795/172033526-bfa56b3c-fcd4-4bfd-b34e-6f971fd12921.png)
+
 - firebase 연동 
 
 - redux 유저 store 개발
@@ -15,7 +17,10 @@
 
 - login, logout 개발
 
+
 #### 2. 상품 페이지 기능 
+![상품목록](https://user-images.githubusercontent.com/53929795/172033524-325a81d2-d274-4801-9aa2-88b9d9e54844.png)
+
 - 상품 API 요청
 : axios를 통해 db.json 호출
 
