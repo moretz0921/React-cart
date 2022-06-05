@@ -24,6 +24,11 @@ async function deleteProduct(id) {
   return res.data;
 }
 
+async function search(searchUrl) {
+  const res = await httpClient.get(`/product?q=${searchUrl}`);
+  return res.data;
+}
+
 async function pagination(currentPage, limit) {
   const res = await httpClient.get(
     `/product/?_page=${currentPage}&_limit=${limit}`
@@ -31,4 +36,11 @@ async function pagination(currentPage, limit) {
   return res.data;
 }
 
-export { getProductList, getProduct, addProduct, deleteProduct, pagination };
+export {
+  getProductList,
+  getProduct,
+  addProduct,
+  deleteProduct,
+  search,
+  pagination,
+};

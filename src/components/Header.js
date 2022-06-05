@@ -7,6 +7,8 @@ import '../firebase';
 import { signOut, getAuth } from 'firebase/auth';
 import theme from '../styles/theme';
 
+import SearchInput from '../components/UI/SearchInput';
+
 function Header() {
   const { user } = useSelector((state) => state);
 
@@ -34,21 +36,7 @@ function Header() {
       </div>
 
       <div className="search-wrap">
-        <div className="search-box">
-          <input
-            name="sword"
-            type="text"
-            required="required"
-            label="검색어"
-            placeholder="검색어를 입력해주세요."
-            className="search"
-          />
-          <input
-            type="image"
-            src="https://res.kurly.com/pc/service/common/1908/ico_search_x2.png"
-            className="btn_search"
-          ></input>
-        </div>
+        <SearchInput />
         <nav className="right">
           {user.currentUser ? (
             <ListWrap>
@@ -128,40 +116,6 @@ const HeaderWrap = styled.div`
   .search-wrap {
     display: flex;
     align-items: center;
-
-    .search-box {
-      position: relative;
-      margin-right: 10px;
-      input {
-        &.search {
-          max-width: 242px;
-          width: 100%;
-          height: 36px;
-          padding: 0 60px 0 14px;
-          border: 1px solid #f7f7f6;
-          border-radius: 18px;
-          background-color: #f7f7f7;
-          font-family: 'Noto Sans';
-          font-weight: 400;
-          font-size: 12px;
-          color: #666;
-          line-height: 16px;
-          outline: none;
-        }
-
-        &.btn_search {
-          position: absolute;
-          right: 5px;
-          top: 3px;
-          width: 30px;
-          height: 30px;
-
-          & img {
-            width: 100%;
-          }
-        }
-      }
-    }
   }
 
   @media ${theme.device.mobile} {
