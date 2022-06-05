@@ -46,7 +46,6 @@ function ProductList({ productItems, setCartItems, cartItems }) {
       {currentCart && (
         <Modal currentCart={currentCart} setCurrentCart={setCurrentCart} />
       )}
-
       {productItems.map((item, idx) => {
         return (
           <ProductItem key={item.id}>

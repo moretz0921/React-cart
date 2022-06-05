@@ -29,9 +29,14 @@ async function search(searchUrl) {
   return res.data;
 }
 
-async function pagination(currentPage, limit) {
+async function pagination(
+  order = 'createdAt',
+  ascending = 'asc',
+  currentPage,
+  limit
+) {
   const res = await httpClient.get(
-    `/product/?_page=${currentPage}&_limit=${limit}`
+    `/product/?_sort=${order}&_order=${ascending}&_page=${currentPage}&_limit=${limit}`
   );
   return res.data;
 }

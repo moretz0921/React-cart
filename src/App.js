@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearUser, setUser } from './store/userReducer';
-import { pagination } from './api/getApi';
+import { getProductList, pagination } from './api/getApi';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -21,6 +21,12 @@ function App() {
     : [];
   const [productItems, setProductItems] = useState([]);
   const [cartItems, setCartItems] = useState(initialCartItem);
+
+  const [tatalProduct, setTotalProduct] = useState([]);
+  const [order, setOrder] = useState('createdAt');
+  const [ascending, setAscending] = useState('asc');
+
+  console.log('변경', ascending);
 
   const [currentPage, setCurrentPage] = useState(1); // 현재 페이지
   const [limit, setLimit] = useState(8); // 한페이지당 나타넬 데이터수
@@ -42,14 +48,23 @@ function App() {
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.user);
 
-  useEffect(() => {
-    const fetchProductData = async () => {
-      const result = await pagination(currentPage, limit);
-      setProductItems(result);
-    };
+  const fetchProductData = async (orderQuery, ascQuery) => {
+    const result = await pagination(orderQuery, ascQuery, currentPage, limit);
+    setProductItems(result);
+  };
 
-    fetchProductData();
+  const fetchTotalData = async () => {
+    const result = await getProductList();
+    setTotalProduct(result);
+  };
+
+  useEffect(() => {
+    fetchTotalData();
   }, []);
+
+  useEffect(() => {
+    fetchProductData(order, ascending);
+  }, [order, ascending]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(getAuth(), (user) => {
@@ -82,6 +97,7 @@ function App() {
           path="/product"
           element={
             <Product
+              tatalProduct={tatalProduct}
               productItems={productItems}
               cartItems={cartItems}
               setCartItems={setCartItems}
@@ -91,6 +107,8 @@ function App() {
               pageGroup={pageGroup}
               prev={prev}
               next={next}
+              setOrder={setOrder}
+              setAscending={setAscending}
             />
           }
         />

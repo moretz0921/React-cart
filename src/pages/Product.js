@@ -6,34 +6,10 @@ import ProductList from '../components/Product/ProductList';
 import Pagination from '../components/UI/Pagination';
 import InnerContainer from '../components/Layout';
 import Search from '../components/Search';
-
-/*
-  "category": [
-    {
-      "categoryId": 1,
-      "categoryCode": "TOTAL",
-      "categoryName": "전체"
-    },
-    {
-      "categoryId": 2,
-      "categoryCode": "POPULAR",
-      "categoryName": "인기순"
-    },
-    {
-      "categoryPk": 3,
-      "categoryCode": "LOW",
-      "categoryName": "낮은가격순"
-    },
-    {
-      "categoryPk": 4,
-      "categoryCode": "HIGH",
-      "categoryName": "높은가격순"
-    }
-  ],
-
-*/
+import Filter from '../components/UI/Filter';
 
 function Product({
+  tatalProduct,
   productItems,
   cartItems,
   setCartItems,
@@ -43,6 +19,8 @@ function Product({
   pageGroup,
   next,
   prev,
+  setOrder,
+  setAscending,
 }) {
   const location = useLocation();
   const searchUrl = new URLSearchParams(location.search).get('q');
@@ -55,6 +33,11 @@ function Product({
         <TitleWrap>
           <h2>이 상품 어때요?</h2>
         </TitleWrap>
+
+        <TotalWrap>
+          <span>총{tatalProduct.length}개</span>
+          <Filter setOrder={setOrder} setAscending={setAscending} />
+        </TotalWrap>
 
         <ProductList
           productItems={productItems}
@@ -85,50 +68,13 @@ const TitleWrap = styled.div`
   }
 `;
 
-const LoadingWrap = styled.div`
+const TotalWrap = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const SearchWrap = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100vh;
-`;
-
-const SearchList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 10px;
-`;
-
-const SearchItem = styled.li`
-  flex: 0 0 25%;
-  padding-right: 10px;
-  cursor: pointer;
-  .img-wrap {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-  }
-
-  .desc-wrap {
-    padding: 15px 10px;
-    h3 {
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    p {
-      font-size: 13px;
-      font-weight: bold;
-    }
-  }
-
-  & img {
-    display: block;
-    width: 100%;
+  justify-content: space-between;
+  padding: 0 10px 0 15px;
+  span {
+    font-size: 12px;
+    color: #333;
+    line-height: 18px;
   }
 `;

@@ -7,11 +7,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { legacy_createStore } from 'redux';
 import rootReducer from './store';
-import { QueryClientProvider, QueryClient } from 'react-query';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import ErrorBoundary from './utils/ErrorBoundary';
-
-const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,13 +16,11 @@ root.render(
     <GlobalStyle />
 
     <Provider store={legacy_createStore(rootReducer, composeWithDevTools())}>
-      <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
-          <ErrorBoundary>
-            <App />
-          </ErrorBoundary>
-        </BrowserRouter>
-      </QueryClientProvider>
+      <BrowserRouter>
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );

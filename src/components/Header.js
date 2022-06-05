@@ -12,7 +12,6 @@ import SearchInput from '../components/UI/SearchInput';
 function Header() {
   const { user } = useSelector((state) => state);
 
-  console.log('ㅇㅇ', user);
   const handleLogout = useCallback(async () => {
     await signOut(getAuth());
   }, []);
