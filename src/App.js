@@ -16,6 +16,9 @@ import Cart from './pages/Cart';
 import Detail from './pages/Detail';
 
 function App() {
+  const dispatch = useDispatch();
+  const { currentUser } = useSelector((state) => state.user);
+
   const initialCartItem = localStorage.getItem('cartState')
     ? JSON.parse(localStorage.getItem('cartState'))
     : [];
@@ -26,12 +29,10 @@ function App() {
   const [order, setOrder] = useState('createdAt');
   const [ascending, setAscending] = useState('asc');
 
-  console.log('변경', ascending);
-
   const [currentPage, setCurrentPage] = useState(1); // 현재 페이지
   const [limit, setLimit] = useState(8); // 한페이지당 나타넬 데이터수
 
-  const totalCount = 24; // 총 페이지
+  const totalCount = 34; // 총 페이지
   const pageCount = 4; // 화면에 나타날 페이지
 
   let totalPage = Math.ceil(totalCount / limit);
@@ -42,14 +43,13 @@ function App() {
   }
   let firstNumber = lastNumber - (pageCount - 1);
 
-  const next = lastNumber + 1;
-  const prev = firstNumber - 1;
+  const next = lastNumber + 1; // 다음버튼
+  const prev = firstNumber - 1; // 이전버튼
 
-  const dispatch = useDispatch();
-  const { currentUser } = useSelector((state) => state.user);
+  console.log(currentPage, '현재페이지');
 
-  const fetchProductData = async (orderQuery, ascQuery) => {
-    const result = await pagination(orderQuery, ascQuery, currentPage, limit);
+  const fetchProductData = async (orderQuery, ascQuery, currentQuery) => {
+    const result = await pagination(orderQuery, ascQuery, currentQuery, limit);
     setProductItems(result);
   };
 
@@ -63,8 +63,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetchProductData(order, ascending);
-  }, [order, ascending]);
+    fetchProductData(order, ascending, currentPage);
+  }, [order, ascending, currentPage]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(getAuth(), (user) => {
@@ -101,9 +101,10 @@ function App() {
               productItems={productItems}
               cartItems={cartItems}
               setCartItems={setCartItems}
-              currentPage={currentPage}
               setCurrentPage={setCurrentPage}
-              totalCount={totalCount}
+              totalPage={totalPage}
+              firstNumber={firstNumber}
+              lastNumber={lastNumber}
               pageGroup={pageGroup}
               prev={prev}
               next={next}

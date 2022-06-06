@@ -287,6 +287,24 @@
       "price": 2500,
       "likeCount": 52,
       "createdAt": "2022-01-05T17:29:19"
+    },
+    {
+      "id": 33,
+      "imgSrc": "assets/images/bread.jpg",
+      "name": "빵콩플레",
+      "desc": "아침을 시작하는 식사 빵",
+      "price": 4700,
+      "likeCount": 12,
+      "createdAt": "2022-01-01T17:29:19"
+    },
+    {
+      "id": 34,
+      "imgSrc": "assets/images/carrot.jpg",
+      "name": "주말 클렌즈",
+      "desc": "몸과 마음 모두 새로워지는 주말",
+      "price": 3000,
+      "likeCount": 43,
+      "createdAt": "2021-06-18T22:29:19"
     }
   ]
 }

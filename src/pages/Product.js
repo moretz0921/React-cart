@@ -13,9 +13,10 @@ function Product({
   productItems,
   cartItems,
   setCartItems,
-  currentPage,
   setCurrentPage,
-  totalCount,
+  totalPage,
+  firstNumber,
+  lastNumber,
   pageGroup,
   next,
   prev,
@@ -45,9 +46,10 @@ function Product({
           setCartItems={setCartItems}
         />
         <Pagination
-          currentPage={currentPage}
           setCurrentPage={setCurrentPage}
-          totalCount={totalCount}
+          totalPage={totalPage}
+          firstNumber={firstNumber}
+          lastNumber={lastNumber}
           pageGroup={pageGroup}
           prev={prev}
           next={next}

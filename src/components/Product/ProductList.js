@@ -78,6 +78,7 @@ const Product = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin-left: 10px;
+  margin-bottom: 60px;
 `;
 
 const ProductItem = styled.li`
