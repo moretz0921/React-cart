@@ -11,6 +11,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.0.1",
     "firebase": "^9.8.2",
     "json-server": "^0.17.0",
@@ -33,7 +34,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch public/db.json --port 8800"
+    "server": "node server",
+    "heroku-postbuild": "npm install"
   },
   "eslintConfig": {
     "extends": [
