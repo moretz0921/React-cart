@@ -47,8 +47,13 @@
 - 장바구니 상품 중복 추가 방지 기능
 
 #### 4. 기타 기능
-- 페이지네이션
-- 인기순 필터링 
+- 페이지네이션 <br/>
+: 현재 페이지, 총 데이터 갯수 구해서 페이지 변경 <br/>
+![페이지네이션](https://user-images.githubusercontent.com/53929795/172089764-c23261b1-b453-4940-ac94-b2951e134215.png) <br/>
+
+- 인기순 필터링 <br/>
+![필터링](https://user-images.githubusercontent.com/53929795/172089751-39a0dd43-810a-45f2-94bf-d867e869aecd.png)
+
 - 검색 기능 <br/>
 : new URLSearchParams 이용, 상품 페이지에서만 검색 가능 <br/><br/>
 ![url](https://user-images.githubusercontent.com/53929795/172033797-933ac7d4-3c4a-479c-8d06-d11019521b32.png)
