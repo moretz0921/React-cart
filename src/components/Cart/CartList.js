@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MIN_COUNT = 1;
-const MAX_COUNT = 10;
+const MAX_COUNT = 1000;
 
 function CartList({ cartItems, setCartItems }) {
   const increaseCartItem = (idx) => {
@@ -11,7 +11,7 @@ function CartList({ cartItems, setCartItems }) {
       newCartItems[idx].count += 1;
       setCartItems(newCartItems);
     } else {
-      alert('장바구니에 담을 수 있는 최대 수량은 10개입니다.');
+      alert('장바구니에 담을 수 있는 최대 수량은 1000개입니다.');
     }
   };
 

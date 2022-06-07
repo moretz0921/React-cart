@@ -5,21 +5,20 @@ import PrevImg from '../../assets/images/prev.svg';
 import NextImg from '../../assets/images/next.svg';
 
 function Pagination({
+  currentPage,
   setCurrentPage,
   totalPage,
   firstNumber,
   lastNumber,
-  pageGroup,
   prev,
   next,
 }) {
-  // i 어케 클릭해?
   const handleNumber = () => {
     let arr = [];
     for (let i = firstNumber; i <= lastNumber; i++) {
       arr.push(
         <li key={i} onClick={() => handleNumberClick(i)}>
-          <a>{i}</a>
+          <a className={currentPage === i ? 'active' : ''}>{i}</a>
         </li>
       );
     }
@@ -29,19 +28,14 @@ function Pagination({
 
   const handleNumberClick = (idx) => {
     setCurrentPage(idx);
-    console.log(idx);
   };
 
   const handlePrevClick = () => {
     setCurrentPage(prev);
-
-    console.log('prev');
   };
 
   const handleNextClick = () => {
     setCurrentPage(next);
-
-    console.log('next');
   };
 
   return (

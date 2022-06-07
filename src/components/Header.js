@@ -9,7 +9,7 @@ import theme from '../styles/theme';
 
 import SearchInput from '../components/UI/SearchInput';
 
-function Header() {
+function Header({ cartItems }) {
   const { user } = useSelector((state) => state);
 
   const handleLogout = useCallback(async () => {
@@ -50,6 +50,8 @@ function Header() {
                     >
                       <path d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.304-15l-3.431 12h-2.102l2.542-9h-16.813l4.615 11h13.239l3.474-12h1.929l.743-2h-4.196z" />
                     </svg>
+
+                    <div className="num">{cartItems.length}</div>
                   </div>
                 </Link>
               </ListItem>
@@ -100,21 +102,42 @@ const HeaderWrap = styled.div`
         display: flex;
         align-items: center;
       }
-      &.right {
-        .cart {
-          width: 30px;
-
-          & svg {
-            width: 100%;
-          }
-        }
-      }
     }
   }
 
   .search-wrap {
     display: flex;
     align-items: center;
+
+    nav {
+      &.right {
+        .cart {
+          position: relative;
+          width: 30px;
+
+          .num {
+            position: absolute;
+            left: 16px;
+            top: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 20px;
+            height: 20px;
+            padding: 0 5px;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            background-color: #5f0080;
+            font-size: 9px;
+            color: #fff;
+          }
+
+          svg {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 
   @media ${theme.device.mobile} {

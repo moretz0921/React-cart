@@ -9,6 +9,7 @@ import Modal from '../UI/Modal';
 
 function ProductList({ productItems, setCartItems, cartItems }) {
   const [currentCart, setCurrentCart] = useState(null);
+  const [currentCount, setCurrentItemCount] = useState(1);
   const navigate = useNavigate();
 
   const handleDetailPage = (currentIdx) => {
@@ -17,6 +18,11 @@ function ProductList({ productItems, setCartItems, cartItems }) {
 
   const handleClose = () => {
     setCurrentCart(null);
+  };
+
+  const handlePoupCart = (currentItem, currentItemCount) => {
+    setCurrentCart(currentItem);
+    setCurrentItemCount(currentItemCount);
   };
 
   // 카트에 넣기
@@ -44,7 +50,14 @@ function ProductList({ productItems, setCartItems, cartItems }) {
       {currentCart && <Backdrop onClick={handleClose}></Backdrop>}
 
       {currentCart && (
-        <Modal currentCart={currentCart} setCurrentCart={setCurrentCart} />
+        <Modal
+          currentCart={currentCart}
+          setCurrentCart={setCurrentCart}
+          currentCount={currentCount}
+          setCurrentItemCount={setCurrentItemCount}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+        />
       )}
       {productItems.map((item, idx) => {
         return (
@@ -56,7 +69,10 @@ function ProductList({ productItems, setCartItems, cartItems }) {
                 onClick={() => handleDetailPage(item.id)}
               />
 
-              <div className="cart-icon" onClick={() => setCurrentCart(item)}>
+              <div
+                className="cart-icon"
+                onClick={() => handlePoupCart(item, item.count)}
+              >
                 <img src={CartIcon} />
               </div>
             </div>

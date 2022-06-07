@@ -1,29 +1,86 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Modal({ currentCart, setCurrentCart }) {
+const MIN_COUNT = 1;
+const MAX_COUNT = 1000;
+
+function Modal({
+  currentCart,
+  setCurrentCart,
+  currentCount,
+  setCurrentItemCount,
+  cartItems,
+  setCartItems,
+}) {
   const { name, price } = currentCart;
+
+  const checkedCartItem = cartItems.find(
+    (item) => item.name === currentCart.name
+  );
 
   const handleClose = () => {
     setCurrentCart(null);
   };
 
-  const increaseCartItem = (idx) => {};
+  const handleAddProduct = () => {
+    if (typeof checkedCartItem == 'undefined') {
+      setCartItems((prevItem) => {
+        return [...prevItem, currentCart];
+      });
+    } else {
+      const checkedCurrentItem = cartItems.find(
+        (item) => item === checkedCartItem
+      );
+      // 장바구니에 저장되어 있는 카운트를 올려야지!!
+      const newCartItems = [...cartItems];
+      checkedCurrentItem.count += 1;
+      setCartItems(newCartItems);
+    }
 
-  const decreaseCartItem = (idx) => {};
+    setCurrentCart(null);
+  };
+
+  const handleIncreaseBtn = () => {
+    if (currentCount < MAX_COUNT) {
+      setCurrentItemCount((currentCount += 1));
+    } else {
+      alert('장바구니에 담을 수 있는 최대 수량은 1000개입니다.');
+    }
+  };
+
+  const handleDecreaseBtn = () => {
+    if (currentCount > MIN_COUNT) {
+      setCurrentItemCount((currentCount -= 1));
+    } else {
+      alert('장바구니에 담을 수 있는 최소 수량은 1개입니다.');
+    }
+  };
 
   return (
     <ModalWrap>
-      <ProductWrap>
-        <span className="name">{name}</span>
-        <span className="price">{price}원</span>
-      </ProductWrap>
+      <ModalTop>
+        <ProductWrap>
+          <span className="name">{name}</span>
+          <span className="price">{price}원</span>
+        </ProductWrap>
+        <Check>
+          <div className="increase">
+            <button className="decrease-btn" onClick={handleDecreaseBtn}>
+              -
+            </button>
+            <div className="count">{currentCount}</div>
+            <button className="increase-btn" onClick={handleIncreaseBtn}>
+              +
+            </button>
+          </div>
+        </Check>
+      </ModalTop>
 
       <ContentWrap>
         <PriceWrap>
           <p className="total">합계</p>
           <p className="price">
-            <span>{price}</span>원
+            <span>{(price * currentCount).toLocaleString()}</span>원
           </p>
         </PriceWrap>
 
@@ -31,7 +88,7 @@ function Modal({ currentCart, setCurrentCart }) {
           <button type="button" class="cancel" onClick={handleClose}>
             취소
           </button>
-          <button type="button" class="cart">
+          <button type="button" class="cart" onClick={handleAddProduct}>
             장바구니 담기
           </button>
         </ButtonWrap>
@@ -67,15 +124,14 @@ const ModalWrap = styled.div`
   background-color: #fff;
 `;
 
-const ContentWrap = styled.div`
+const ModalTop = styled.div`
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
 `;
 
 const ProductWrap = styled.div`
-  padding-top: 20px;
   font-size: 14px;
 
   span {
@@ -90,6 +146,37 @@ const ProductWrap = styled.div`
       font-weight: bold;
     }
   }
+`;
+
+const Check = styled.div`
+  display: flex;
+  justify-content: space-between;
+  .increase {
+    display: flex;
+    align-items: center;
+    .decrease-btn {
+      margin-right: 10px;
+      margin-bottom: 2px;
+      font-size: 28px;
+    }
+    .increase-btn {
+      margin-left: 10px;
+      font-size: 20px;
+    }
+    .count {
+      font-size: 14px;
+      color: #000;
+      line-height: 18px;
+      text-align: center;
+    }
+  }
+`;
+
+const ContentWrap = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 100%;
 `;
 
 const PriceWrap = styled.div`
@@ -142,48 +229,3 @@ const ButtonWrap = styled.div`
     }
   }
 `;
-
-const Check = styled.div`
-  display: flex;
-  justify-content: space-between;
-  .increase {
-    display: flex;
-    align-items: center;
-    .decrease-btn {
-      margin-right: 10px;
-    }
-    .increase-btn {
-      margin-left: 10px;
-    }
-    .count {
-      font-size: 12px;
-      font-weight: bold;
-    }
-  }
-  .remove-btn {
-    color: #42a7f5;
-    font-size: 12px;
-    font-weight: bold;
-  }
-`;
-
-/*
-  <Check>
-    <div className="increase">
-      <button
-        className="decrease-btn"
-        onClick={() => decreaseCartItem(idx)}
-      >
-        -
-      </button>
-      <div className="count">{count}</div>
-      <button
-        className="increase-btn"
-        onClick={() => increaseCartItem(idx)}
-      >
-        +
-      </button>
-    </div>
-  </Check>
-
-*/

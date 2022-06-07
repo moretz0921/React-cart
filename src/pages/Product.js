@@ -12,12 +12,12 @@ function Product({
   tatalProduct,
   productItems,
   cartItems,
+  currentPage,
   setCartItems,
   setCurrentPage,
   totalPage,
   firstNumber,
   lastNumber,
-  pageGroup,
   next,
   prev,
   setOrder,
@@ -46,11 +46,11 @@ function Product({
           setCartItems={setCartItems}
         />
         <Pagination
+          currentPage={currentPage}
           setCurrentPage={setCurrentPage}
           totalPage={totalPage}
           firstNumber={firstNumber}
           lastNumber={lastNumber}
-          pageGroup={pageGroup}
           prev={prev}
           next={next}
         />

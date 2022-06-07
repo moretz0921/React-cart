@@ -46,8 +46,6 @@ function App() {
   const next = lastNumber + 1; // 다음버튼
   const prev = firstNumber - 1; // 이전버튼
 
-  console.log(currentPage, '현재페이지');
-
   const fetchProductData = async (orderQuery, ascQuery, currentQuery) => {
     const result = await pagination(orderQuery, ascQuery, currentQuery, limit);
     setProductItems(result);
@@ -79,11 +77,17 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header cartItems={cartItems} />
       <Routes>
         <Route
           path="/"
-          element={currentUser ? <Main /> : <Navigate to="/login" />}
+          element={
+            currentUser ? (
+              <Main productItems={productItems} />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
         />
         <Route
           path="/login"
@@ -101,6 +105,7 @@ function App() {
               productItems={productItems}
               cartItems={cartItems}
               setCartItems={setCartItems}
+              currentPage={currentPage}
               setCurrentPage={setCurrentPage}
               totalPage={totalPage}
               firstNumber={firstNumber}
