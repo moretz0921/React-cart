@@ -1,4 +1,4 @@
-### 기술 스택
+### 환경 설정 
 - React 18
 - Styled-component
 - Redux
@@ -60,3 +60,10 @@
 
 
 ### firebase 배포 
+
+
+
+### 트러블 슈팅 
+- react의 동작원리와 javascript의 기본적인 원리등을 이해해야만 코드가 완성되기 때문에 이러한 점이 어려웠다.
+- json-server 사용 후 배포 과정에서 heroku를 이용했는데 push 과정에서 계속 Build failed이 발생되서 애를 먹었다. <br/>
+아직 원인이 파악이 안됬지만, `"heroku-postbuild": "cross-env NODE_PATH=src npm run build"` 이 부분을 `"heroku-postbuild": "npm install"` 로 변경했더니 배포가 되었다.. 
