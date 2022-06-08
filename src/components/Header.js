@@ -7,6 +7,8 @@ import '../firebase';
 import { signOut, getAuth } from 'firebase/auth';
 import theme from '../styles/theme';
 
+import CartImg from '../assets/images/cart.svg';
+import AddressImg from '../assets/images/adress.svg';
 import SearchInput from '../components/UI/SearchInput';
 
 function Header({ cartItems }) {
@@ -15,6 +17,10 @@ function Header({ cartItems }) {
   const handleLogout = useCallback(async () => {
     await signOut(getAuth());
   }, []);
+
+  const handleClickAddress = () => {
+    console.log('클릭중');
+  };
 
   return (
     <HeaderWrap>
@@ -40,16 +46,14 @@ function Header({ cartItems }) {
           {user.currentUser ? (
             <ListWrap>
               <ListItem>
+                <div className="address" onClick={handleClickAddress}>
+                  <img src={AddressImg} alt="" />
+                </div>
+              </ListItem>
+              <ListItem>
                 <Link to="/cart">
                   <div className="cart">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="30"
-                      height="30"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.304-15l-3.431 12h-2.102l2.542-9h-16.813l4.615 11h13.239l3.474-12h1.929l.743-2h-4.196z" />
-                    </svg>
+                    <img src={CartImg} alt="" />
 
                     <div className="num">{cartItems.length}</div>
                   </div>
@@ -111,13 +115,17 @@ const HeaderWrap = styled.div`
 
     nav {
       &.right {
+        .address {
+          width: 30px;
+          cursor: pointer;
+        }
         .cart {
           position: relative;
           width: 30px;
 
           .num {
             position: absolute;
-            left: 16px;
+            left: 20px;
             top: -3px;
             display: flex;
             justify-content: center;
@@ -131,10 +139,10 @@ const HeaderWrap = styled.div`
             font-size: 9px;
             color: #fff;
           }
+        }
 
-          svg {
-            width: 100%;
-          }
+        & img {
+          width: 100%;
         }
       }
     }

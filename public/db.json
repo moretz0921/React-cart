@@ -8,7 +8,48 @@
       "price": 4700,
       "likeCount": 15,
       "count": 1,
-      "createdAt": "2022-03-01T17:29:19"
+      "createdAt": "2022-03-01T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1봉"
+        },
+        {
+          "title": "중량/용량",
+          "content": "260g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "상온/종이포장"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "밀 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_bread.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 2,
@@ -18,7 +59,48 @@
       "price": 3000,
       "likeCount": 20,
       "count": 1,
-      "createdAt": "2022-04-12T22:29:19"
+      "createdAt": "2022-04-12T22:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1박스"
+        },
+        {
+          "title": "중량/용량",
+          "content": "350ml*10"
+        },
+        {
+          "title": "배송구분",
+          "content": "기타"
+        },
+        {
+          "title": "포장타입",
+          "content": "상온/종이포장"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "본 제품은 토마토를 사용한 제품과 같은 제조 시설에서 제조하고 있습니다."
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_juice.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 3,
@@ -28,7 +110,48 @@
       "price": 12700,
       "likeCount": 50,
       "count": 1,
-      "createdAt": "2021-08-14T17:29:19"
+      "createdAt": "2021-08-14T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1통"
+        },
+        {
+          "title": "중량/용량",
+          "content": "260g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "우유 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_cheese.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 4,
@@ -38,7 +161,48 @@
       "price": 8500,
       "likeCount": 70,
       "count": 1,
-      "createdAt": "2021-09-167T17:29:19"
+      "createdAt": "2021-09-167T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "200ml*5개입"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "본 제품은 토마토를 사용한 제품과 같은 제조 시설에서 제조하고 있습니다."
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_green.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 5,
@@ -48,7 +212,48 @@
       "price": 3000,
       "likeCount": 40,
       "count": 1,
-      "createdAt": "2022-03-18T17:23:19"
+      "createdAt": "2022-03-18T17:23:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "170g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉동/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "고등어 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_green.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 6,
@@ -58,7 +263,48 @@
       "price": 15000,
       "likeCount": 30,
       "count": 1,
-      "createdAt": "2022-06-25T17:29:19"
+      "createdAt": "2022-06-25T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "800g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "돼지고기 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_meat.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 7,
@@ -68,7 +314,49 @@
       "price": 6000,
       "likeCount": 70,
       "count": 1,
-      "createdAt": "2022-06-31T17:29:19"
+      "createdAt": "2022-06-31T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1병"
+        },
+        {
+          "title": "중량/용량",
+          "content": "1000ml"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "이 제품은 복숭아, 우유, 토마토, 대두를 사용한 제품과 같은 제조시설에서 제조"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_carrot.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
+      
     },
     {
       "id": 8,
@@ -78,7 +366,48 @@
       "price": 2500,
       "likeCount": 5,
       "count": 1,
-      "createdAt": "2022-02-28T17:29:19"
+      "createdAt": "2022-02-28T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1병"
+        },
+        {
+          "title": "중량/용량",
+          "content": "250ml"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송ONLY"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "최소 구매수량",
+          "content": "3개이상부터 구매가능"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_water.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 9,
@@ -86,9 +415,50 @@
       "name": "빵콩플레",
       "desc": "아침을 시작하는 식사 빵",
       "price": 4700,
-      "likeCount": 120,
+      "likeCount": 15,
       "count": 1,
-      "createdAt": "2022-04-01T17:29:19"
+      "createdAt": "2022-04-01T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1봉"
+        },
+        {
+          "title": "중량/용량",
+          "content": "260g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "상온/종이포장"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "밀 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_bread.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 10,
@@ -96,9 +466,50 @@
       "name": "주말 클렌즈",
       "desc": "몸과 마음 모두 새로워지는 주말",
       "price": 3000,
-      "likeCount": 80,
+      "likeCount": 20,
       "count": 1,
-      "createdAt": "2022-01-31T22:29:19"
+      "createdAt": "2022-05-12T22:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1박스"
+        },
+        {
+          "title": "중량/용량",
+          "content": "350ml*10"
+        },
+        {
+          "title": "배송구분",
+          "content": "기타"
+        },
+        {
+          "title": "포장타입",
+          "content": "상온/종이포장"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "본 제품은 토마토를 사용한 제품과 같은 제조 시설에서 제조하고 있습니다."
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_juice.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 11,
@@ -106,9 +517,50 @@
       "name": "까망베르 2종",
       "desc": "정통 방식으로 만들어 더욱 깊어진 풍미",
       "price": 12700,
-      "likeCount": 54,
+      "likeCount": 50,
       "count": 1,
-      "createdAt": "2022-08-17T17:29:19"
+      "createdAt": "2021-02-14T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1통"
+        },
+        {
+          "title": "중량/용량",
+          "content": "260g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "우유 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_cheese.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 12,
@@ -116,9 +568,50 @@
       "name": "콜린스그린",
       "desc": "클렌즈 입문자용",
       "price": 8500,
-      "likeCount": 23,
+      "likeCount": 70,
       "count": 1,
-      "createdAt": "2022-07-25T17:29:19"
+      "createdAt": "2021-03-167T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "200ml*5개입"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "본 제품은 토마토를 사용한 제품과 같은 제조 시설에서 제조하고 있습니다."
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_green.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 13,
@@ -126,9 +619,31 @@
       "name": "고등어",
       "desc": "두고 먹기 좋은 세트",
       "price": 3000,
-      "likeCount": 30,
+      "likeCount": 40,
       "count": 1,
-      "createdAt": "2022-05-01T17:23:19"
+      "createdAt": "2022-01-15T17:23:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "170g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉동/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "고등어 함유"
+        }
+      ]
     },
     {
       "id": 14,
@@ -136,9 +651,50 @@
       "name": "슈바인 학센",
       "desc": "겉 바삭, 속 촉촉",
       "price": 15000,
-      "likeCount": 35,
+      "likeCount": 30,
       "count": 1,
-      "createdAt": "2022-03-03T17:29:19"
+      "createdAt": "2022-06-22T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "800g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "돼지고기 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_meat.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 15,
@@ -146,8 +702,50 @@
       "name": "당근 주스",
       "desc": "제주 당근의 신선함",
       "price": 6000,
-      "likeCount": 60,
-      "createdAt": "2022-11-12T17:29:19"
+      "likeCount": 70,
+      "count": 1,
+      "createdAt": "2022-09-31T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1병"
+        },
+        {
+          "title": "중량/용량",
+          "content": "1000ml"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "이 제품은 복숭아, 우유, 토마토, 대두를 사용한 제품과 같은 제조시설에서 제조"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_carrot.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 16,
@@ -155,9 +753,50 @@
       "name": "탄산수",
       "desc": "청량함 가득",
       "price": 2500,
-      "likeCount": 25,
+      "likeCount": 5,
       "count": 1,
-      "createdAt": "2022-12-13T17:29:19"
+      "createdAt": "2022-01-31T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1병"
+        },
+        {
+          "title": "중량/용량",
+          "content": "250ml"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송ONLY"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "최소 구매수량",
+          "content": "3개이상부터 구매가능"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_water.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 17,
@@ -165,9 +804,50 @@
       "name": "빵콩플레",
       "desc": "아침을 시작하는 식사 빵",
       "price": 4700,
-      "likeCount": 35,
+      "likeCount": 15,
       "count": 1,
-      "createdAt": "2021-06-02T17:29:19"
+      "createdAt": "2022-06-11T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1봉"
+        },
+        {
+          "title": "중량/용량",
+          "content": "260g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "상온/종이포장"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "밀 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_bread.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 18,
@@ -175,9 +855,50 @@
       "name": "주말 클렌즈",
       "desc": "몸과 마음 모두 새로워지는 주말",
       "price": 3000,
-      "likeCount": 23,
+      "likeCount": 20,
       "count": 1,
-      "createdAt": "2021-12-18T22:29:19"
+      "createdAt": "2022-03-19T22:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1박스"
+        },
+        {
+          "title": "중량/용량",
+          "content": "350ml*10"
+        },
+        {
+          "title": "배송구분",
+          "content": "기타"
+        },
+        {
+          "title": "포장타입",
+          "content": "상온/종이포장"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "본 제품은 토마토를 사용한 제품과 같은 제조 시설에서 제조하고 있습니다."
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_juice.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 19,
@@ -185,9 +906,50 @@
       "name": "까망베르 2종",
       "desc": "정통 방식으로 만들어 더욱 깊어진 풍미",
       "price": 12700,
-      "likeCount": 76,
+      "likeCount": 50,
       "count": 1,
-      "createdAt": "2021-07-16T17:29:19"
+      "createdAt": "2021-04-21T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1통"
+        },
+        {
+          "title": "중량/용량",
+          "content": "260g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "우유 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_cheese.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 20,
@@ -195,9 +957,50 @@
       "name": "콜린스그린",
       "desc": "클렌즈 입문자용",
       "price": 8500,
-      "likeCount": 65,
+      "likeCount": 70,
       "count": 1,
-      "createdAt": "2022-05-14T17:29:19"
+      "createdAt": "2021-05-117T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "200ml*5개입"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "본 제품은 토마토를 사용한 제품과 같은 제조 시설에서 제조하고 있습니다."
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_green.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 21,
@@ -205,9 +1008,31 @@
       "name": "고등어",
       "desc": "두고 먹기 좋은 세트",
       "price": 3000,
-      "likeCount": 98,
+      "likeCount": 40,
       "count": 1,
-      "createdAt": "2022-02-13T17:23:19"
+      "createdAt": "2022-09-11T17:23:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "170g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉동/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "고등어 함유"
+        }
+      ]
     },
     {
       "id": 22,
@@ -215,9 +1040,50 @@
       "name": "슈바인 학센",
       "desc": "겉 바삭, 속 촉촉",
       "price": 15000,
-      "likeCount": 66,
+      "likeCount": 30,
       "count": 1,
-      "createdAt": "2022-06-13T17:29:19"
+      "createdAt": "2022-08-15T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "800g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "돼지고기 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_meat.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 23,
@@ -225,9 +1091,50 @@
       "name": "당근 주스",
       "desc": "제주 당근의 신선함",
       "price": 6000,
-      "likeCount": 50,
+      "likeCount": 70,
       "count": 1,
-      "createdAt": "2022-04-12T17:29:19"
+      "createdAt": "2022-02-13T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1병"
+        },
+        {
+          "title": "중량/용량",
+          "content": "1000ml"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "이 제품은 복숭아, 우유, 토마토, 대두를 사용한 제품과 같은 제조시설에서 제조"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_carrot.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 24,
@@ -235,9 +1142,50 @@
       "name": "탄산수",
       "desc": "청량함 가득",
       "price": 2500,
-      "likeCount": 30,
+      "likeCount": 5,
       "count": 1,
-      "createdAt": "2022-09-11T17:29:19"
+      "createdAt": "2022-01-15T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1병"
+        },
+        {
+          "title": "중량/용량",
+          "content": "250ml"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송ONLY"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "최소 구매수량",
+          "content": "3개이상부터 구매가능"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_water.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 25,
@@ -245,9 +1193,50 @@
       "name": "빵콩플레",
       "desc": "아침을 시작하는 식사 빵",
       "price": 4700,
-      "likeCount": 12,
+      "likeCount": 15,
       "count": 1,
-      "createdAt": "2022-01-01T17:29:19"
+      "createdAt": "2022-09-12T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1봉"
+        },
+        {
+          "title": "중량/용량",
+          "content": "260g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "상온/종이포장"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "밀 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_bread.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 26,
@@ -255,9 +1244,50 @@
       "name": "주말 클렌즈",
       "desc": "몸과 마음 모두 새로워지는 주말",
       "price": 3000,
-      "likeCount": 43,
+      "likeCount": 20,
       "count": 1,
-      "createdAt": "2021-06-18T22:29:19"
+      "createdAt": "2022-02-14T22:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1박스"
+        },
+        {
+          "title": "중량/용량",
+          "content": "350ml*10"
+        },
+        {
+          "title": "배송구분",
+          "content": "기타"
+        },
+        {
+          "title": "포장타입",
+          "content": "상온/종이포장"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "본 제품은 토마토를 사용한 제품과 같은 제조 시설에서 제조하고 있습니다."
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_juice.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 27,
@@ -265,9 +1295,50 @@
       "name": "까망베르 2종",
       "desc": "정통 방식으로 만들어 더욱 깊어진 풍미",
       "price": 12700,
-      "likeCount": 76,
+      "likeCount": 50,
       "count": 1,
-      "createdAt": "2022-07-09T17:29:19"
+      "createdAt": "2021-08-21T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1통"
+        },
+        {
+          "title": "중량/용량",
+          "content": "260g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "우유 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_cheese.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 28,
@@ -275,9 +1346,50 @@
       "name": "콜린스그린",
       "desc": "클렌즈 입문자용",
       "price": 8500,
-      "likeCount": 34,
+      "likeCount": 70,
       "count": 1,
-      "createdAt": "2022-05-05T17:29:19"
+      "createdAt": "2021-06-117T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "200ml*5개입"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "본 제품은 토마토를 사용한 제품과 같은 제조 시설에서 제조하고 있습니다."
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_green.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 29,
@@ -285,9 +1397,31 @@
       "name": "고등어",
       "desc": "두고 먹기 좋은 세트",
       "price": 3000,
-      "likeCount": 15,
+      "likeCount": 40,
       "count": 1,
-      "createdAt": "2022-06-14T17:23:19"
+      "createdAt": "2022-09-21T17:23:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "170g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉동/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "고등어 함유"
+        }
+      ]
     },
     {
       "id": 30,
@@ -295,9 +1429,50 @@
       "name": "슈바인 학센",
       "desc": "겉 바삭, 속 촉촉",
       "price": 15000,
-      "likeCount": 56,
+      "likeCount": 30,
       "count": 1,
-      "createdAt": "2022-03-13T17:29:19"
+      "createdAt": "2022-03-03T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1팩"
+        },
+        {
+          "title": "중량/용량",
+          "content": "800g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "돼지고기 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_meat.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 31,
@@ -305,9 +1480,50 @@
       "name": "당근 주스",
       "desc": "제주 당근의 신선함",
       "price": 6000,
-      "likeCount": 34,
+      "likeCount": 70,
       "count": 1,
-      "createdAt": "2022-02-22T17:29:19"
+      "createdAt": "2022-08-31T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1병"
+        },
+        {
+          "title": "중량/용량",
+          "content": "1000ml"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "이 제품은 복숭아, 우유, 토마토, 대두를 사용한 제품과 같은 제조시설에서 제조"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_carrot.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 32,
@@ -315,9 +1531,50 @@
       "name": "탄산수",
       "desc": "청량함 가득",
       "price": 2500,
-      "likeCount": 52,
+      "likeCount": 5,
       "count": 1,
-      "createdAt": "2022-01-05T17:29:19"
+      "createdAt": "2022-07-15T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1병"
+        },
+        {
+          "title": "중량/용량",
+          "content": "250ml"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송ONLY"
+        },
+        {
+          "title": "포장타입",
+          "content": "냉장/스티로폼"
+        },
+        {
+          "title": "최소 구매수량",
+          "content": "3개이상부터 구매가능"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_water.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+      ]
     },
     {
       "id": 33,
@@ -325,9 +1582,50 @@
       "name": "빵콩플레",
       "desc": "아침을 시작하는 식사 빵",
       "price": 4700,
-      "likeCount": 12,
+      "likeCount": 15,
       "count": 1,
-      "createdAt": "2022-01-01T17:29:19"
+      "createdAt": "2022-01-26T17:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1봉"
+        },
+        {
+          "title": "중량/용량",
+          "content": "260g"
+        },
+        {
+          "title": "배송구분",
+          "content": "샛별배송/택배배송"
+        },
+        {
+          "title": "포장타입",
+          "content": "상온/종이포장"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "밀 함유"
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_bread.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     },
     {
       "id": 34,
@@ -335,9 +1633,50 @@
       "name": "주말 클렌즈",
       "desc": "몸과 마음 모두 새로워지는 주말",
       "price": 3000,
-      "likeCount": 43,
+      "likeCount": 20,
       "count": 1,
-      "createdAt": "2021-06-18T22:29:19"
+      "createdAt": "2021-03-12T22:29:19",
+      "detail": [
+        {
+          "title": "판매단위",
+          "content": "1박스"
+        },
+        {
+          "title": "중량/용량",
+          "content": "350ml*10"
+        },
+        {
+          "title": "배송구분",
+          "content": "기타"
+        },
+        {
+          "title": "포장타입",
+          "content": "상온/종이포장"
+        },
+        {
+          "title": "알레르기정보",
+          "content": "본 제품은 토마토를 사용한 제품과 같은 제조 시설에서 제조하고 있습니다."
+        }
+      ],
+      "tab": [
+        {
+          "title": "상품설명",
+          "imgSrc": "assets/images/tab_juice.jpg"
+        },
+        {
+          "title": "상세정보",
+          "imgSrc": "assets/images/kurly.png"
+        },
+        {
+          "title": "후기",
+          "imgSrc": "assets/images/kurly.png"
+         
+        },
+        { 
+          "title": "문의",
+          "imgSrc": "assets/images/review.png"
+        }
+       ]
     }
   ]
 }

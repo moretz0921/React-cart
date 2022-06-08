@@ -25,26 +25,6 @@ function ProductList({ productItems, setCartItems, cartItems }) {
     setCurrentItemCount(currentItemCount);
   };
 
-  // 카트에 넣기
-  const handleAddProduct = (idx) => {
-    const currentProduct = productItems[idx];
-    const checkedIdx = cartItems.findIndex(
-      (item) => item.id === currentProduct.id
-    );
-
-    if (checkedIdx === -1) {
-      setCartItems((prev) => {
-        return [...prev, { ...currentProduct, count: 1 }];
-      });
-    } else {
-      const newCartItems = [...cartItems];
-      newCartItems[idx].count += 1;
-      setCartItems(newCartItems);
-    }
-  };
-
-  /* onClick={() => handleAddProduct(idx)}  id, name, imgSrc, price */
-
   return (
     <Product>
       {currentCart && <Backdrop onClick={handleClose}></Backdrop>}
@@ -107,6 +87,17 @@ const ProductItem = styled.li`
     border-radius: 10px;
     border: 1px solid #ddd;
     box-sizing: border-box;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1);
+      transition: transform 0.5s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
     .cart-icon {
       position: absolute;
       right: 10px;

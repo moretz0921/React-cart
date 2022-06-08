@@ -77,6 +77,7 @@ const CarouselStyle = styled.div`
   background-color: rgb(238, 238, 238);
 
   .carousel {
+    cursor: pointer;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;

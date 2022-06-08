@@ -14,7 +14,9 @@ function Recipe({ productItems }) {
         {productItems.map((item, idx) => {
           return (
             <SliderItem key={item.id}>
-              <img src={item.imgSrc} alt="" />
+              <div className="img-wrap">
+                <img src={item.imgSrc} alt="" />
+              </div>
             </SliderItem>
           );
         })}
@@ -82,9 +84,21 @@ const StyledSlider = styled(ReactSlider)`
 `;
 
 const SliderItem = styled.div`
-  & img {
+  .img-wrap {
+    overflow: hidden;
     width: 250px;
     height: 320px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1);
+      transition: transform 0.5s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 `;
 const ArrowButton = styled.button`
