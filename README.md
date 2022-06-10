@@ -3,7 +3,6 @@
 - Styled-component
 - Redux
 - react-query
-- typescript
 - firebase
 - json-server
 
