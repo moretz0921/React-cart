@@ -20,7 +20,7 @@ function Login() {
   const loginUser = async (email: string, password: any) => {
     try {
       await signInWithEmailAndPassword(getAuth(), email, password);
-    } catch (e) {
+    } catch (e: any) {
       setError(e.message);
     }
   };

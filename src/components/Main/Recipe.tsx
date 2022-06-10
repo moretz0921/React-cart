@@ -15,7 +15,7 @@ function Recipe({ productItems }: MainProps) {
     <InnerWrap>
       <Title>이 상품 어때요?</Title>
       <StyledSlider {...settings}>
-        {productItems.map((item, idx) => {
+        {productItems.map((item: any, idx: number) => {
           return (
             <SliderItem key={item.id}>
               <div className="img-wrap">

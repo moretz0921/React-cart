@@ -36,20 +36,28 @@ function App() {
   const totalCount = 34;
   const pageCount = 4;
 
-  let totalPage = Math.ceil(totalCount / limit);
-  let pageGroup = Math.ceil(currentPage / pageCount);
+  const totalPage = Math.ceil(totalCount / limit);
+  const pageGroup = Math.ceil(currentPage / pageCount);
   let lastNumber = pageGroup * pageCount;
   if (lastNumber > totalPage) {
     lastNumber = totalPage;
   }
-  let firstNumber = lastNumber - (pageCount - 1);
+  const firstNumber = lastNumber - (pageCount - 1);
 
   const next = lastNumber + 1;
   const prev = firstNumber - 1;
 
-
-  const fetchProductData = async (orderQuery: any, ascQuery: any, currentQuery: any) => {
-    const result: any = await pagination(orderQuery, ascQuery, currentQuery, limit);
+  const fetchProductData = async (
+    orderQuery: any,
+    ascQuery: any,
+    currentQuery: any,
+  ) => {
+    const result: any = await pagination(
+      orderQuery,
+      ascQuery,
+      currentQuery,
+      limit,
+    );
     setProductItems(result);
   };
 
@@ -68,7 +76,7 @@ function App() {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(getAuth(), (user) => {
-      if (!!user) {
+      if (user) {
         dispatch(setUser(user));
       } else {
         dispatch(clearUser());
