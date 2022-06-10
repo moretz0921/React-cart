@@ -1,7 +1,7 @@
 const SET_USER = 'SET_USER';
 const CLEAR_USER = 'CLEAR_USER';
 
-export const setUser = (user) => ({ type: SET_USER, currentUser: user });
+export const setUser = (user: any) => ({ type: SET_USER, currentUser: user });
 export const clearUser = () => ({ type: CLEAR_USER });
 
 const initialState = {
@@ -9,7 +9,7 @@ const initialState = {
   isLoading: true,
 };
 
-const userReducer = (state = initialState, action) => {
+const userReducer = (state = initialState, action: any) => {
   switch (action.type) {
     case SET_USER:
       return {

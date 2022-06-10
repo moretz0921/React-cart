@@ -4,8 +4,8 @@ import ScrollTop from '../assets/images/btn-scroll-top.svg';
 import InnerContainer from './Layout';
 
 function Footer() {
-  const [scrollY, setScrollY] = useState(0);
-  const [btnState, setBtnState] = useState(false);
+  const [scrollY, setScrollY] = useState<number>(0);
+  const [btnState, setBtnState] = useState<boolean>(false);
 
   const handleOffsetTop = () => {
     setScrollY(window.pageYOffset);

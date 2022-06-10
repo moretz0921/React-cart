@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const httpClient = axios.create({
-  baseURL: 'http://localhost:8800', //https://cart-server-app.herokuapp.com
+  baseURL: 'https://cart-server-app.herokuapp.com', //http://localhost:8800
 });
 
 async function getProductList() {
@@ -9,36 +9,36 @@ async function getProductList() {
   return res.data;
 }
 
-async function getProduct(id) {
+async function getProduct(id: number) {
   const res = await httpClient.get(`/product/${id}`);
   return res.data;
 }
 
-async function putProduct(data = null) {
+async function putProduct(data: any = null) {
   const res = await httpClient.patch(`/product/${data.id}`, data);
   return res.data;
 }
 
-async function addProduct(data) {
+async function addProduct(data: any) {
   const res = await httpClient.post('/product', data);
   return res.data;
 }
 
-async function deleteProduct(id) {
+async function deleteProduct(id: number) {
   const res = await httpClient.delete(`/product/${id}`);
   return res.data;
 }
 
-async function search(searchUrl) {
+async function search(searchUrl: string) {
   const res = await httpClient.get(`/product?q=${searchUrl}`);
   return res.data;
 }
 
 async function pagination(
-  order = 'createdAt',
-  ascending = 'asc',
-  currentPage,
-  limit
+  order: string = 'createdAt',
+  ascending: string = 'asc',
+  currentPage: number,
+  limit: number
 ) {
   const res = await httpClient.get(
     `/product/?_sort=${order}&_order=${ascending}&_page=${currentPage}&_limit=${limit}`

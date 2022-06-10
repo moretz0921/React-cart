@@ -6,7 +6,11 @@ import Discount from '../components/Main/Discount';
 import Banner from '../components/UI/Banner';
 import InnerWrap from '../components/Layout';
 
-function Main({ productItems }) {
+type MainProps = {
+  productItems?: any
+};
+
+function Main({ productItems }: MainProps) {
   return (
     <InnerWrap paddingBottom={100}>
       <Slider />

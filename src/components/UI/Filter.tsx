@@ -1,24 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Filter({ setOrder, setAscending }) {
-  const handleLatestClick = (e) => {
+type FilterProps = {
+  setOrder: (param: string) => void;
+  setAscending: (param: string) => void;
+};
+
+function Filter({ setOrder, setAscending }: FilterProps) {
+  const handleLatestClick = (e: any) => {
     e.preventDefault();
     setOrder('createdAt');
   };
 
-  const handlePopularClick = (e) => {
+  const handlePopularClick = (e: any) => {
     e.preventDefault();
     setOrder('likeCount');
   };
 
-  const handleLowPriceClick = (e) => {
+  const handleLowPriceClick = (e: any) => {
     e.preventDefault();
     setOrder('price');
     setAscending('asc');
   };
 
-  const handleHighPriceClick = (e) => {
+  const handleHighPriceClick = (e: any) => {
     e.preventDefault();
     setOrder('price');
     setAscending('desc');

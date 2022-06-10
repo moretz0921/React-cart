@@ -4,8 +4,21 @@ import styled from 'styled-components';
 const MIN_COUNT = 1;
 const MAX_COUNT = 1000;
 
-function CartList({ cartItems, setCartItems }) {
-  const increaseCartItem = (idx) => {
+type CartListProps = {
+  cartItems?: any,
+  setCartItems?: any,
+};
+
+type ItemType = {
+  id: any, 
+  name: string, 
+  imgSrc: string, 
+  price: number, 
+  count: number
+};
+
+function CartList({ cartItems, setCartItems }: CartListProps) {
+  const increaseCartItem = (idx: number) => {
     const newCartItems = [...cartItems];
     if (newCartItems[idx].count < MAX_COUNT) {
       newCartItems[idx].count += 1;
@@ -15,7 +28,7 @@ function CartList({ cartItems, setCartItems }) {
     }
   };
 
-  const decreaseCartItem = (idx) => {
+  const decreaseCartItem = (idx: number) => {
     const newCartItems = [...cartItems];
     if (newCartItems[idx].count > MIN_COUNT) {
       newCartItems[idx].count -= 1;
@@ -25,7 +38,7 @@ function CartList({ cartItems, setCartItems }) {
     }
   };
 
-  const deleteCartItem = (idx) => {
+  const deleteCartItem = (idx: number) => {
     const newCartItem = [...cartItems];
     newCartItem.splice(idx, 1);
     setCartItems(newCartItem);
@@ -33,7 +46,7 @@ function CartList({ cartItems, setCartItems }) {
 
   return (
     <CartLists>
-      {cartItems.map(({ id, name, imgSrc, price, count }, idx) => {
+      {cartItems.map(({ id, name, imgSrc, price, count }: ItemType, idx: number) => {
         return (
           <CartItem key={id}>
             <div className="img-wrap">

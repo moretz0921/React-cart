@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 import CartList from '../components/Cart/CartList';
 import InnerContainer from '../components/Layout';
 
-function Cart({ cartItems, setCartItems }) {
+type CartProps = {
+  cartItems?: any,
+  setCartItems?: any,
+};
+
+function Cart({ cartItems, setCartItems }: CartProps) {
   const saveToLocalStorage = () => {
     localStorage.setItem('cartState', JSON.stringify(cartItems));
   };
@@ -25,7 +30,7 @@ function Cart({ cartItems, setCartItems }) {
             <p>결제금액</p>
             <p className="font-bold" id="total-count">
               {cartItems
-                .reduce((acc, cur) => cur.price * cur.count + acc, 0)
+                .reduce((acc: any, cur: any) => cur.price * cur.count + acc, 0)
                 .toLocaleString() + '원'}
             </p>
           </PayWrap>

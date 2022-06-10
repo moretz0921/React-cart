@@ -3,32 +3,22 @@ import styled from 'styled-components';
 import { useSearchParams } from 'react-router-dom';
 
 function SearchInput() {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState<string>('');
   const [searchParams, setSerachParams] = useSearchParams();
 
   useEffect(() => {
     setSearchText(searchParams.get('q') ?? '');
   }, [searchParams]);
 
-  const onChangeInput = useCallback((e) => {
+  const onChangeInput = useCallback((e: any) => {
     setSearchText(e.target.value);
   }, []);
 
   const onKeyUp = useCallback(
-    (e) => {
+    (e: any) => {
       if (e.key === 'Enter' && e.target.value.trim().length > 0) {
         setSerachParams({ q: e.target.value });
       }
-    },
-    [setSerachParams]
-  );
-
-  const handleClick = useCallback(
-    (e) => {
-      if (e.target.value.trim().length > 0) {
-        setSerachParams({ q: e.target.value });
-      }
-      console.log('클릭중');
     },
     [setSerachParams]
   );

@@ -17,7 +17,7 @@ function Search() {
         <SearchWrap>
           <SearchList>
             {searchData &&
-              searchData.map((item, idx) => {
+              searchData.map((item: any, idx: number) => {
                 return (
                   <SearchItem key={item.id}>
                     <div className="img-wrap">

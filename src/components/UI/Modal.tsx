@@ -4,6 +4,15 @@ import styled from 'styled-components';
 const MIN_COUNT = 1;
 const MAX_COUNT = 1000;
 
+type ModalProps = {
+  currentCart?: any,
+  setCurrentCart: (pram: any) => void,
+  currentCount?: any,
+  setCurrentItemCount: (param: number) => void,
+  cartItems?: any,
+  setCartItems?: any,
+};
+
 function Modal({
   currentCart,
   setCurrentCart,
@@ -11,11 +20,11 @@ function Modal({
   setCurrentItemCount,
   cartItems,
   setCartItems,
-}) {
+}: ModalProps) {
   const { name, price } = currentCart;
 
   const checkedCartItem = cartItems.find(
-    (item) => item.name === currentCart.name
+    (item: any) => item.name === currentCart.name
   );
 
   const handleClose = () => {
@@ -24,12 +33,12 @@ function Modal({
 
   const handleAddProduct = () => {
     if (typeof checkedCartItem == 'undefined') {
-      setCartItems((prevItem) => {
+      setCartItems((prevItem: any) => {
         return [...prevItem, currentCart];
       });
     } else {
       const checkedCurrentItem = cartItems.find(
-        (item) => item === checkedCartItem
+        (item: any) => item === checkedCartItem
       );
       // 장바구니에 저장되어 있는 카운트를 올려야지!!
       const newCartItems = [...cartItems];
@@ -85,10 +94,10 @@ function Modal({
         </PriceWrap>
 
         <ButtonWrap>
-          <button type="button" class="cancel" onClick={handleClose}>
+          <button type="button" className="cancel" onClick={handleClose}>
             취소
           </button>
-          <button type="button" class="cart" onClick={handleAddProduct}>
+          <button type="button" className="cart" onClick={handleAddProduct}>
             장바구니 담기
           </button>
         </ButtonWrap>

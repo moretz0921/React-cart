@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
-function Button({ prev, next, handleSlide }) {
+type ButtonProps = {
+  prev?: boolean,
+  next?: boolean,
+  handleSlide: (param: any) => void
+};
+
+function Button({ prev, next, handleSlide }: ButtonProps) {
   return <ButtonStyle prev={prev} next={next} onClick={handleSlide} />;
 }
 
 export default Button;
 
-const ButtonStyle = styled.div`
+const ButtonStyle = styled.div<ButtonProps>`
   position: absolute;
   top: 50%;
   width: 52px;

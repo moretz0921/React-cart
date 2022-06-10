@@ -6,7 +6,11 @@ import 'slick-carousel/slick/slick-theme.css';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 import theme from '../../styles/theme';
 
-function Recipe({ productItems }) {
+type MainProps = {
+  productItems?: any
+};
+
+function Recipe({ productItems }: MainProps) {
   return (
     <InnerWrap>
       <Title>이 상품 어때요?</Title>

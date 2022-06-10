@@ -18,20 +18,20 @@ import MyPage from './pages/MyPage';
 
 function App() {
   const dispatch = useDispatch();
-  const { currentUser } = useSelector((state) => state.user);
+  const { currentUser } = useSelector((state: any) => state.user);
 
   const initialCartItem = localStorage.getItem('cartState')
-    ? JSON.parse(localStorage.getItem('cartState'))
+    ? JSON.parse(localStorage.getItem('cartState') || '{}')
     : [];
-  const [productItems, setProductItems] = useState([]);
+  const [productItems, setProductItems] = useState<[]>([]);
   const [cartItems, setCartItems] = useState(initialCartItem);
 
-  const [tatalProduct, setTotalProduct] = useState([]);
-  const [order, setOrder] = useState('createdAt');
-  const [ascending, setAscending] = useState('asc');
+  const [tatalProduct, setTotalProduct] = useState<[]>([]);
+  const [order, setOrder] = useState<string>('createdAt');
+  const [ascending, setAscending] = useState<string>('asc');
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(8);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [limit, setLimit] = useState<number>(8);
 
   const totalCount = 34;
   const pageCount = 4;
@@ -47,8 +47,9 @@ function App() {
   const next = lastNumber + 1;
   const prev = firstNumber - 1;
 
-  const fetchProductData = async (orderQuery, ascQuery, currentQuery) => {
-    const result = await pagination(orderQuery, ascQuery, currentQuery, limit);
+
+  const fetchProductData = async (orderQuery: any, ascQuery: any, currentQuery: any) => {
+    const result: any = await pagination(orderQuery, ascQuery, currentQuery, limit);
     setProductItems(result);
   };
 
@@ -111,7 +112,6 @@ function App() {
               totalPage={totalPage}
               firstNumber={firstNumber}
               lastNumber={lastNumber}
-              pageGroup={pageGroup}
               prev={prev}
               next={next}
               setOrder={setOrder}

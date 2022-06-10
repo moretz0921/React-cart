@@ -5,7 +5,7 @@ import Button from './Button';
 
 function Carousel() {
   const totalItems = 5;
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState<number>(0);
 
   const isMoving = useRef(false);
 
@@ -36,8 +36,8 @@ function Carousel() {
     }
   };
 
-  const ItemList = Array(totalItems)
-    .fill()
+  const ItemList = Array<number>(totalItems)
+    .fill(0)
     .map((_, index) => {
       const key = `item_${index}`;
 

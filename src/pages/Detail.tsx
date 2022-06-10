@@ -13,7 +13,7 @@ function Detail() {
   const { id } = useParams();
   const { isLoading, isError, product } = useDetail(id);
 
-  const [isLike, setIsLike] = useState(false);
+  const [isLike, setIsLike] = useState<boolean>(false);
 
   return (
     <InnerContainer paddingLeft={20} paddingRight={20} paddingBottom={100}>
@@ -36,7 +36,7 @@ function Detail() {
               </PriceWrap>
               <DescWrap>
                 {product.detail &&
-                  product.detail.map((item, idx) => {
+                  product.detail.map((item: any, idx: number) => {
                     return (
                       <dl key={idx} className="list">
                         <dt>{item.title}</dt>

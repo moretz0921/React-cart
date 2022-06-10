@@ -1,12 +1,19 @@
 import styled from 'styled-components';
 
-function Item({ src, active, prev, next }) {
+type ItemProps = {
+  src?: string,
+  active?: boolean,
+  prev?: boolean,
+  next?: boolean,
+};
+
+function Item({ src, active, prev, next }: ItemProps) {
   return <ItemStyle src={src} active={active} prev={prev} next={next} alt="" />;
 }
 
 export default Item;
 
-const ItemStyle = styled.img`
+const ItemStyle = styled.img<ItemProps>`
   opacity: 0;
   position: absolute;
   top: 0;

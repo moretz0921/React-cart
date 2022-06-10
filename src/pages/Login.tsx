@@ -5,19 +5,19 @@ import '../firebase';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [error, setError] = useState<string>('');
 
-  const onEmailHandler = (e) => {
+  const onEmailHandler = (e: any) => {
     setEmail(e.currentTarget.value);
   };
 
-  const onPasswordHandler = (e) => {
+  const onPasswordHandler = (e: any) => {
     setPassword(e.currentTarget.value);
   };
 
-  const loginUser = async (email, password) => {
+  const loginUser = async (email: string, password: any) => {
     try {
       await signInWithEmailAndPassword(getAuth(), email, password);
     } catch (e) {
@@ -25,8 +25,8 @@ function Login() {
     }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
 
     if (!email || !password) {
       setError('모든 항목을 입력해주세요.');

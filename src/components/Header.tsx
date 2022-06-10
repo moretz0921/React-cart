@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -6,14 +6,17 @@ import Logo from '../assets/images/logo.png';
 import '../firebase';
 import { signOut, getAuth } from 'firebase/auth';
 import theme from '../styles/theme';
-import { useDaumPostcodePopup } from 'react-daum-postcode';
 
 import CartImg from '../assets/images/cart.svg';
 import AddressImg from '../assets/images/adress.svg';
-import SearchInput from '../components/UI/SearchInput';
+import SearchInput from './UI/SearchInput';
 
-function Header({ cartItems }) {
-  const { user } = useSelector((state) => state);
+type HeaderProps = {
+  cartItems?: any
+};
+
+function Header({ cartItems }: HeaderProps) {
+  const { user } = useSelector((state: any) => state);
 
   const handleLogout = useCallback(async () => {
     await signOut(getAuth());

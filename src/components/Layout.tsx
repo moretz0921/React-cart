@@ -2,13 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 
+type ContainerProps = {
+  children: any;
+  paddingLeft?: number;
+  paddingRight?: number;
+  paddingBottom?: number;
+  paddingTop?: number;
+};
+
 function Container({
   children,
   paddingLeft,
   paddingRight,
   paddingBottom,
   paddingTop,
-}) {
+}: ContainerProps) {
   return (
     <InnerContainer
       paddingLeft={paddingLeft}
@@ -23,7 +31,12 @@ function Container({
 
 export default Container;
 
-const InnerContainer = styled.div`
+const InnerContainer = styled.div<{
+  paddingLeft?: number;
+  paddingRight?: number;
+  paddingBottom?: number;
+  paddingTop?: number;
+}>`
   min-width: 100%;
   width: 100%;
   height: 100%;

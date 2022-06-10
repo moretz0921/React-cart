@@ -11,7 +11,7 @@ import { getDatabase, ref, set } from 'firebase/database';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../store/userReducer';
 
-const IsPasswordValid = (password, confirmPassword) => {
+const IsPasswordValid = (password: any, confirmPassword: any) => {
   if (password.length < 6 || confirmPassword.length < 6) {
     return false;
   } else if (password !== confirmPassword) {
@@ -21,29 +21,29 @@ const IsPasswordValid = (password, confirmPassword) => {
 
 function Join() {
   const dispatch = useDispatch();
-  const [error, setError] = useState('');
-  const [nickname, setNickname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setconfirmPassword] = useState('');
+  const [error, setError] = useState<string>('');
+  const [nickname, setNickname] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [confirmPassword, setconfirmPassword] = useState<string>('');
 
-  const onNicknameHandler = (e) => {
+  const onNicknameHandler = (e: any) => {
     setNickname(e.currentTarget.value);
   };
 
-  const onEmailHandler = (e) => {
+  const onEmailHandler = (e: any) => {
     setEmail(e.currentTarget.value);
   };
 
-  const onPasswordHandler = (e) => {
+  const onPasswordHandler = (e: any) => {
     setPassword(e.currentTarget.value);
   };
 
-  const onConfirmPasswordHandler = (e) => {
+  const onConfirmPasswordHandler = (e: any) => {
     setconfirmPassword(e.currentTarget.value);
   };
 
-  const postUserData = async (name, email, password) => {
+  const postUserData = async (name: string, email: string, password: any) => {
     try {
       const { user } = await createUserWithEmailAndPassword(
         getAuth(),
@@ -58,13 +58,13 @@ function Join() {
       });
       // store에 user 저장
       dispatch(setUser(user));
-    } catch (e) {
+    } catch (e: any) {
       setError(e.message);
     }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
 
     if (!nickname || !email || !password || !confirmPassword) {
       setError('모든 항목을 입력해주세요');

@@ -4,15 +4,20 @@ import styled from 'styled-components';
 
 import CartIcon from '../../assets/images/product_cart.svg';
 import theme from '../../styles/theme';
-
 import Modal from '../UI/Modal';
 
-function ProductList({ productItems, setCartItems, cartItems }) {
-  const [currentCart, setCurrentCart] = useState(null);
-  const [currentCount, setCurrentItemCount] = useState(1);
+type ProductListProps = {
+  productItems?: any,
+  cartItems?: any,
+  setCartItems?: any,
+};
+
+function ProductList({ productItems, setCartItems, cartItems }: ProductListProps) {
+  const [currentCart, setCurrentCart] = useState<null>(null);
+  const [currentCount, setCurrentItemCount] = useState<number>(1);
   const navigate = useNavigate();
 
-  const handleDetailPage = (currentIdx) => {
+  const handleDetailPage = (currentIdx: number) => {
     navigate(`/detail/${currentIdx}`);
   };
 
@@ -20,7 +25,7 @@ function ProductList({ productItems, setCartItems, cartItems }) {
     setCurrentCart(null);
   };
 
-  const handlePoupCart = (currentItem, currentItemCount) => {
+  const handlePoupCart = (currentItem: any, currentItemCount: number) => {
     setCurrentCart(currentItem);
     setCurrentItemCount(currentItemCount);
   };
@@ -39,7 +44,7 @@ function ProductList({ productItems, setCartItems, cartItems }) {
           setCartItems={setCartItems}
         />
       )}
-      {productItems.map((item, idx) => {
+      {productItems.map((item: any, idx: number) => {
         return (
           <ProductItem key={item.id}>
             <div className="img-wrap">

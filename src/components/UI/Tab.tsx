@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-function Tab({ post }) {
+type TabProps = {
+  post?: any,
+};
+
+function Tab({ post }: TabProps) {
   const publicUrl = process.env.PUBLIC_URL;
-
   const postTab = post.tab;
-
-  const [activeIndex, setActiveIndex] = useState(0);
-  const handleChangeTab = (currentIndex) => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  
+  const handleChangeTab = (currentIndex: number) => {
     setActiveIndex(currentIndex);
   };
 
@@ -15,7 +18,7 @@ function Tab({ post }) {
     <TabWrap>
       <TabList>
         {postTab &&
-          postTab.map((item, idx) => {
+          postTab.map((item: any, idx: number) => {
             return (
               <TabItem key={idx}>
                 <a
@@ -31,7 +34,7 @@ function Tab({ post }) {
       <ContentList>
         <ContentWrap>
           {postTab &&
-            postTab.map((item, idx) => {
+            postTab.map((item: any, idx: number) => {
               return (
                 <ContentItem
                   key={idx}

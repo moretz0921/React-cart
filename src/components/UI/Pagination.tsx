@@ -3,8 +3,17 @@ import styled from 'styled-components';
 
 import PrevImg from '../../assets/images/prev.svg';
 import NextImg from '../../assets/images/next.svg';
-
 import theme from '../../styles/theme';
+
+type PaginationProps = {
+  currentPage?: number,
+  setCurrentPage: (param: number) => void,
+  totalPage?: any,
+  firstNumber?: number,
+  lastNumber?: any,
+  prev?: any,
+  next?: any
+};
 
 function Pagination({
   currentPage,
@@ -14,10 +23,10 @@ function Pagination({
   lastNumber,
   prev,
   next,
-}) {
+}: PaginationProps) {
   const handleNumber = () => {
     let arr = [];
-    for (let i = firstNumber; i <= lastNumber; i++) {
+    for (let i: any = firstNumber; i <= lastNumber; i++) {
       arr.push(
         <li key={i} onClick={() => handleNumberClick(i)}>
           <a className={currentPage === i ? 'active' : ''}>{i}</a>
@@ -28,7 +37,7 @@ function Pagination({
     return arr;
   };
 
-  const handleNumberClick = (idx) => {
+  const handleNumberClick = (idx: number) => {
     setCurrentPage(idx);
   };
 
