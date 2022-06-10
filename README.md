@@ -58,6 +58,10 @@
 : new URLSearchParams 이용, 상품 페이지에서만 검색 가능 <br/><br/>
 ![url](https://user-images.githubusercontent.com/53929795/172033797-933ac7d4-3c4a-479c-8d06-d11019521b32.png)
 
+- 탭 <br/>
+: 현재 클릭된 tab 제목의 index와 내용의 index가 같을 경우 활성화 시킴 <br/> 
+![detail](https://user-images.githubusercontent.com/53929795/172656248-27b4e837-2363-414b-a25b-a62ca5e9b2be.png)
+
 
 ### firebase 배포 
 
