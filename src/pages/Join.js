@@ -27,8 +27,6 @@ function Join() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setconfirmPassword] = useState('');
 
-  //const [loading, setLoading] = useState(false);
-
   const onNicknameHandler = (e) => {
     setNickname(e.currentTarget.value);
   };
@@ -46,7 +44,6 @@ function Join() {
   };
 
   const postUserData = async (name, email, password) => {
-    //setLoading(true);
     try {
       const { user } = await createUserWithEmailAndPassword(
         getAuth(),
@@ -63,7 +60,6 @@ function Join() {
       dispatch(setUser(user));
     } catch (e) {
       setError(e.message);
-      //setLoading(false);
     }
   };
 

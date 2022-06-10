@@ -8,7 +8,6 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  //const [loading, setLoading] = useState(false);
 
   const onEmailHandler = (e) => {
     setEmail(e.currentTarget.value);
@@ -19,12 +18,10 @@ function Login() {
   };
 
   const loginUser = async (email, password) => {
-    //setLoading(true);
     try {
       await signInWithEmailAndPassword(getAuth(), email, password);
     } catch (e) {
       setError(e.message);
-      //setLoading(false);
     }
   };
 

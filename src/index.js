@@ -9,6 +9,9 @@ import { legacy_createStore } from 'redux';
 import rootReducer from './store';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import ErrorBoundary from './utils/ErrorBoundary';
+import { QueryClientProvider, QueryClient } from 'react-query';
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,11 +19,13 @@ root.render(
     <GlobalStyle />
 
     <Provider store={legacy_createStore(rootReducer, composeWithDevTools())}>
-      <BrowserRouter>
-        <ErrorBoundary>
-          <App />
-        </ErrorBoundary>
-      </BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <ErrorBoundary>
+            <App />
+          </ErrorBoundary>
+        </BrowserRouter>
+      </QueryClientProvider>
     </Provider>
   </React.StrictMode>
 );

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -6,6 +6,7 @@ import Logo from '../assets/images/logo.png';
 import '../firebase';
 import { signOut, getAuth } from 'firebase/auth';
 import theme from '../styles/theme';
+import { useDaumPostcodePopup } from 'react-daum-postcode';
 
 import CartImg from '../assets/images/cart.svg';
 import AddressImg from '../assets/images/adress.svg';
@@ -17,10 +18,6 @@ function Header({ cartItems }) {
   const handleLogout = useCallback(async () => {
     await signOut(getAuth());
   }, []);
-
-  const handleClickAddress = () => {
-    console.log('클릭중');
-  };
 
   return (
     <HeaderWrap>
@@ -46,7 +43,7 @@ function Header({ cartItems }) {
           {user.currentUser ? (
             <ListWrap>
               <ListItem>
-                <div className="address" onClick={handleClickAddress}>
+                <div className="address">
                   <img src={AddressImg} alt="" />
                 </div>
               </ListItem>
@@ -59,7 +56,15 @@ function Header({ cartItems }) {
                   </div>
                 </Link>
               </ListItem>
-              <ListItem>{user.currentUser?.displayName}님</ListItem>
+              <ListItem className="mypage">
+                <Link to="/mypage">{user.currentUser?.displayName}님</Link>
+                <div className="subNav">
+                  <ul>
+                    <li>주문내역</li>
+                    <li>찜한상품</li>
+                  </ul>
+                </div>
+              </ListItem>
               <ListItem onClick={handleLogout}>로그아웃</ListItem>
             </ListWrap>
           ) : (
@@ -176,6 +181,31 @@ const ListItem = styled.li`
   padding: 0 10px;
   color: #333;
   font-size: 14px;
+
+  &.mypage {
+    position: relative;
+    &:hover {
+      .subNav {
+        opacity: 1;
+      }
+    }
+
+    .subNav {
+      opacity: 0;
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      width: 100px;
+      border: 1px solid #ddd;
+      padding: 5px;
+      font-size: 12px;
+      background-color: #fff;
+
+      li {
+        padding: 5px 0;
+      }
+    }
+  }
 
   @media ${theme.device.mobile} {
     padding: 0 5px;

@@ -14,6 +14,7 @@ import Main from './pages/Main';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
 import Detail from './pages/Detail';
+import MyPage from './pages/MyPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -29,11 +30,11 @@ function App() {
   const [order, setOrder] = useState('createdAt');
   const [ascending, setAscending] = useState('asc');
 
-  const [currentPage, setCurrentPage] = useState(1); // 현재 페이지
-  const [limit, setLimit] = useState(8); // 한페이지당 나타넬 데이터수
+  const [currentPage, setCurrentPage] = useState(1);
+  const [limit, setLimit] = useState(8);
 
-  const totalCount = 34; // 총 페이지
-  const pageCount = 4; // 화면에 나타날 페이지
+  const totalCount = 34;
+  const pageCount = 4;
 
   let totalPage = Math.ceil(totalCount / limit);
   let pageGroup = Math.ceil(currentPage / pageCount);
@@ -43,8 +44,8 @@ function App() {
   }
   let firstNumber = lastNumber - (pageCount - 1);
 
-  const next = lastNumber + 1; // 다음버튼
-  const prev = firstNumber - 1; // 이전버튼
+  const next = lastNumber + 1;
+  const prev = firstNumber - 1;
 
   const fetchProductData = async (orderQuery, ascQuery, currentQuery) => {
     const result = await pagination(orderQuery, ascQuery, currentQuery, limit);
@@ -123,6 +124,7 @@ function App() {
           path="/cart"
           element={<Cart cartItems={cartItems} setCartItems={setCartItems} />}
         />
+        <Route path="/mypage" element={<MyPage />} />
       </Routes>
       <Footer />
     </>

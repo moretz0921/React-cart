@@ -1,44 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
-import { search } from '../api/getApi';
+import { useSearch } from '../hooks/useSearch';
 import InnerContainer from './Layout';
 
 function Search() {
   const location = useLocation();
   const searchUrl = new URLSearchParams(location.search).get('q');
-  const [searchData, setSearchData] = useState([]);
-
-  useEffect(() => {
-    const fetchSearchData = async () => {
-      const result = await search(searchUrl);
-      setSearchData(result);
-    };
-
-    fetchSearchData();
-  }, [searchUrl]);
+  const { isLoading, isError, searchData } = useSearch(searchUrl);
 
   return (
     <InnerContainer paddingLeft={20} paddingRight={20}>
-      <SearchWrap>
-        <SearchList>
-          {searchData &&
-            searchData.map((item, idx) => {
-              return (
-                <SearchItem key={item.id}>
-                  <div className="img-wrap">
-                    <img src={item.imgSrc} alt="" />
-                  </div>
+      {isLoading || isError ? (
+        <div>로딩중</div>
+      ) : (
+        <SearchWrap>
+          <SearchList>
+            {searchData &&
+              searchData.map((item, idx) => {
+                return (
+                  <SearchItem key={item.id}>
+                    <div className="img-wrap">
+                      <img src={item.imgSrc} alt="" />
+                    </div>
 
-                  <div className="desc-wrap">
-                    <h3>{item.name}</h3>
-                    <p>{item.price.toLocaleString()}원</p>
-                  </div>
-                </SearchItem>
-              );
-            })}
-        </SearchList>
-      </SearchWrap>
+                    <div className="desc-wrap">
+                      <h3>{item.name}</h3>
+                      <p>{item.price.toLocaleString()}원</p>
+                    </div>
+                  </SearchItem>
+                );
+              })}
+          </SearchList>
+        </SearchWrap>
+      )}
     </InnerContainer>
   );
 }

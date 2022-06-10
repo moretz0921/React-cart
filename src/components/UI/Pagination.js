@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import PrevImg from '../../assets/images/prev.svg';
 import NextImg from '../../assets/images/next.svg';
 
+import theme from '../../styles/theme';
+
 function Pagination({
   currentPage,
   setCurrentPage,
@@ -65,6 +67,13 @@ const InnerWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${theme.device.mobile} {
+    margin-bottom: 50px;
+  }
+
+  @media ${theme.device.iphone} {
+  }
 `;
 
 const Prev = styled.button`

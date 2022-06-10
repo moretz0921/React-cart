@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import DisCountImg from '../../assets/images/discount.jpg';
 import { useInterval } from '../../hooks/useInterval';
+import theme from '../../styles/theme';
 
 function Discount() {
   let dday = new Date('June 09, 2022, 24:00:00').getTime();
@@ -59,7 +60,7 @@ const DisCountWrap = styled.div`
   justify-content: space-between;
   max-width: 1050px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px 20px;
 
   .title-wrap {
     h2 {
@@ -85,14 +86,34 @@ const DisCountWrap = styled.div`
       font-weight: 800;
     }
   }
+
+  @media ${theme.device.mobile} {
+    flex-direction: column;
+    padding: 50px 10px;
+
+  .title-wrap {
+    margin-bottom: 30px;
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .time {
+      font-size: 24px;
+   
+    }
+  }
+
+  @media ${theme.device.iphone} {
+  }
 `;
 
 const ContentWrap = styled.div`
-  width: 700px;
-
   .img-wrap {
     overflow: hidden;
-    width: 700px;
     height: 347px;
     margin-bottom: 10px;
 
@@ -154,5 +175,11 @@ const ContentWrap = styled.div`
       line-height: normal;
       text-decoration: line-through;
     }
+  }
+
+  @media ${theme.device.mobile} {
+  }
+
+  @media ${theme.device.iphone} {
   }
 `;

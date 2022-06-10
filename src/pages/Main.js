@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Slider from '../components/UI/Slider';
 import RecipeSlider from '../components/Main/Recipe';

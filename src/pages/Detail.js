@@ -1,60 +1,67 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import InnerContainer from '../components/Layout';
 import Tab from '../components/UI/Tab';
-import { getProduct } from '../api/getApi';
+import { useDetail } from '../hooks/useDetail';
+
+import HeartIcon from '../assets/images/detail_like.svg';
+import HeartIconActive from '../assets/images/detail_like_on.svg';
 
 function Detail() {
   const publicUrl = process.env.PUBLIC_URL;
   const { id } = useParams();
-  const [post, setPost] = useState([]);
-  const detail = post.detail;
+  const { isLoading, isError, product } = useDetail(id);
 
-  console.log(post.imgSrc, '이미지');
-
-  useEffect(() => {
-    const fetchPostData = async () => {
-      const result = await getProduct(id);
-
-      setPost(result);
-    };
-
-    fetchPostData();
-  }, [id]);
+  const [isLike, setIsLike] = useState(false);
 
   return (
     <InnerContainer paddingLeft={20} paddingRight={20} paddingBottom={100}>
-      <DetailWrap>
-        <ImgWrap>
-          <img src={`${publicUrl}/${post.imgSrc}`} alt="" />
-        </ImgWrap>
+      {isLoading || isError ? (
+        <div>로딩중</div>
+      ) : (
+        <>
+          <DetailWrap>
+            <ImgWrap>
+              <img src={`${publicUrl}/${product.imgSrc}`} alt="" />
+            </ImgWrap>
 
-        <div>
-          <ContentWrap>
-            <Title>{post.name}</Title>
-            <Desc>{post.desc}</Desc>
-          </ContentWrap>
-          <PriceWrap>
-            <Price>{post.price}원</Price>
-          </PriceWrap>
-          <DescWrap>
-            {detail &&
-              detail.map((item, idx) => {
-                return (
-                  <dl key={idx} className="list">
-                    <dt>{item.title}</dt>
-                    <dd>{item.content}</dd>
-                  </dl>
-                );
-              })}
-          </DescWrap>
-        </div>
-      </DetailWrap>
+            <div>
+              <ContentWrap>
+                <Title>{product.name}</Title>
+                <Desc>{product.desc}</Desc>
+              </ContentWrap>
+              <PriceWrap>
+                <Price>{product.price}원</Price>
+              </PriceWrap>
+              <DescWrap>
+                {product.detail &&
+                  product.detail.map((item, idx) => {
+                    return (
+                      <dl key={idx} className="list">
+                        <dt>{item.title}</dt>
+                        <dd>{item.content}</dd>
+                      </dl>
+                    );
+                  })}
+              </DescWrap>
 
-      <TabWrap>
-        <Tab post={post} />
-      </TabWrap>
+              <ButtonWrap>
+                <div className="heart-img">
+                  {isLike ? (
+                    <img src={HeartIconActive} alt="" />
+                  ) : (
+                    <img src={HeartIcon} alt="" />
+                  )}
+                </div>
+              </ButtonWrap>
+            </div>
+          </DetailWrap>
+          <TabWrap>
+            <Tab post={product} />
+          </TabWrap>
+        </>
+      )}
     </InnerContainer>
   );
 }
@@ -136,3 +143,22 @@ const DescWrap = styled.div`
 `;
 
 const TabWrap = styled.div``;
+
+const ButtonWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  .heart-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    & img {
+      width: 32px;
+    }
+  }
+`;

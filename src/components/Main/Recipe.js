@@ -4,9 +4,9 @@ import ReactSlider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
+import theme from '../../styles/theme';
 
 function Recipe({ productItems }) {
-  console.log(productItems, 'product');
   return (
     <InnerWrap>
       <Title>이 상품 어때요?</Title>
@@ -39,6 +39,13 @@ const Title = styled.h2`
   letter-spacing: -0.26px;
   font-weight: 600;
   text-align: center;
+
+  @media ${theme.device.mobile} {
+    font-size: 20px;
+  }
+
+  @media ${theme.device.iphone} {
+  }
 `;
 
 const StyledSlider = styled(ReactSlider)`
@@ -46,6 +53,13 @@ const StyledSlider = styled(ReactSlider)`
     max-width: 1050px;
     width: 1050px;
     margin: 0 auto;
+
+    @media ${theme.device.mobile} {
+      width: 100%;
+    }
+
+    @media ${theme.device.iphone} {
+    }
   }
   .slick-list {
     max-width: 1050px;
@@ -57,6 +71,13 @@ const StyledSlider = styled(ReactSlider)`
     justify-content: center;
     width: 250px;
     height: 320px;
+
+    @media ${theme.device.mobile} {
+      width: 100%;
+    }
+
+    @media ${theme.device.iphone} {
+    }
   }
 
   .slick-slide div {
@@ -140,4 +161,27 @@ const settings = {
       <MdArrowForwardIos />
     </ArrowButton>
   ),
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      },
+    },
+    {
+      breakpoint: 720,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };

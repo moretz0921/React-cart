@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const httpClient = axios.create({
-  baseURL: 'https://cart-server-app.herokuapp.com', //http://localhost:8800
+  baseURL: 'http://localhost:8800', //https://cart-server-app.herokuapp.com
 });
 
 async function getProductList() {
@@ -11,6 +11,11 @@ async function getProductList() {
 
 async function getProduct(id) {
   const res = await httpClient.get(`/product/${id}`);
+  return res.data;
+}
+
+async function putProduct(data = null) {
+  const res = await httpClient.patch(`/product/${data.id}`, data);
   return res.data;
 }
 
@@ -44,6 +49,7 @@ async function pagination(
 export {
   getProductList,
   getProduct,
+  putProduct,
   addProduct,
   deleteProduct,
   search,
