@@ -7,23 +7,23 @@ type FilterProps = {
 };
 
 function Filter({ setOrder, setAscending }: FilterProps) {
-  const handleLatestClick = (e: any) => {
+  const handleLatestClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     setOrder('createdAt');
   };
 
-  const handlePopularClick = (e: any) => {
+  const handlePopularClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     setOrder('likeCount');
   };
 
-  const handleLowPriceClick = (e: any) => {
+  const handleLowPriceClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     setOrder('price');
     setAscending('asc');
   };
 
-  const handleHighPriceClick = (e: any) => {
+  const handleHighPriceClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     setOrder('price');
     setAscending('desc');

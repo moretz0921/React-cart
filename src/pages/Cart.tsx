@@ -5,8 +5,8 @@ import CartList from '../components/Cart/CartList';
 import InnerContainer from '../components/Layout';
 
 type CartProps = {
-  cartItems?: any,
-  setCartItems?: any,
+  cartItems?: any;
+  setCartItems?: any;
 };
 
 function Cart({ cartItems, setCartItems }: CartProps) {

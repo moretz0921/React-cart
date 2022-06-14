@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 type TabProps = {
-  post?: any,
+  post?: any;
 };
 
 function Tab({ post }: TabProps) {
   const publicUrl = process.env.PUBLIC_URL;
   const postTab = post.tab;
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  
+
   const handleChangeTab = (currentIndex: number) => {
     setActiveIndex(currentIndex);
   };

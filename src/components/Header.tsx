@@ -12,7 +12,7 @@ import AddressImg from '../assets/images/adress.svg';
 import SearchInput from './UI/SearchInput';
 
 type HeaderProps = {
-  cartItems?: any
+  cartItems?: any;
 };
 
 function Header({ cartItems }: HeaderProps) {

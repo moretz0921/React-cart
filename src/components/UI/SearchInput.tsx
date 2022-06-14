@@ -20,7 +20,7 @@ function SearchInput() {
         setSerachParams({ q: e.target.value });
       }
     },
-    [setSerachParams]
+    [setSerachParams],
   );
 
   return (

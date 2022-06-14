@@ -1,9 +1,10 @@
+import React from 'react';
 import styled from 'styled-components';
 
 type ButtonProps = {
-  prev?: boolean,
-  next?: boolean,
-  handleSlide: (param: any) => void
+  prev?: boolean;
+  next?: boolean;
+  handleSlide?: (event: React.MouseEvent<HTMLElement> | 'undefined') => void;
 };
 
 function Button({ prev, next, handleSlide }: ButtonProps) {

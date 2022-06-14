@@ -6,13 +6,13 @@ import NextImg from '../../assets/images/next.svg';
 import theme from '../../styles/theme';
 
 type PaginationProps = {
-  currentPage?: number,
-  setCurrentPage: (param: number) => void,
-  totalPage?: any,
-  firstNumber?: number,
-  lastNumber?: any,
-  prev?: any,
-  next?: any
+  currentPage?: number;
+  setCurrentPage: (param: number) => void;
+  totalPage?: any;
+  firstNumber?: number;
+  lastNumber?: any;
+  prev?: any;
+  next?: any;
 };
 
 function Pagination({
@@ -25,12 +25,12 @@ function Pagination({
   next,
 }: PaginationProps) {
   const handleNumber = () => {
-    let arr = [];
+    const arr = [];
     for (let i: any = firstNumber; i <= lastNumber; i++) {
       arr.push(
         <li key={i} onClick={() => handleNumberClick(i)}>
           <a className={currentPage === i ? 'active' : ''}>{i}</a>
-        </li>
+        </li>,
       );
     }
 

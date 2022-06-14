@@ -3,7 +3,7 @@ import { search } from '../api/getApi';
 
 export function useSearch(searchUrl: any) {
   const { isLoading, error, isError, data } = useQuery(['search'], () =>
-    search(searchUrl)
+    search(searchUrl),
   );
 
   return {

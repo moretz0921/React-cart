@@ -7,7 +7,7 @@ import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 import theme from '../../styles/theme';
 
 type MainProps = {
-  productItems?: any
+  productItems?: any;
 };
 
 function Recipe({ productItems }: MainProps) {

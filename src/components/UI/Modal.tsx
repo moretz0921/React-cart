@@ -5,12 +5,12 @@ const MIN_COUNT = 1;
 const MAX_COUNT = 1000;
 
 type ModalProps = {
-  currentCart?: any,
-  setCurrentCart: (pram: any) => void,
-  currentCount?: any,
-  setCurrentItemCount: (param: number) => void,
-  cartItems?: any,
-  setCartItems?: any,
+  currentCart?: any;
+  setCurrentCart: (pram: any) => void;
+  currentCount?: any;
+  setCurrentItemCount: (param: number) => void;
+  cartItems?: any;
+  setCartItems?: any;
 };
 
 function Modal({
@@ -40,7 +40,7 @@ function Modal({
       const checkedCurrentItem = cartItems.find(
         (item: any) => item === checkedCartItem
       );
-      // 장바구니에 저장되어 있는 카운트를 올려야지!!
+
       const newCartItems = [...cartItems];
       checkedCurrentItem.count += 1;
       setCartItems(newCartItems);

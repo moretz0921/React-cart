@@ -5,16 +5,16 @@ const MIN_COUNT = 1;
 const MAX_COUNT = 1000;
 
 type CartListProps = {
-  cartItems?: any,
-  setCartItems?: any,
+  cartItems?: any;
+  setCartItems?: any;
 };
 
 type ItemType = {
-  id: any, 
-  name: string, 
-  imgSrc: string, 
-  price: number, 
-  count: number
+  id: any;
+  name: string;
+  imgSrc: string;
+  price: number;
+  count: number;
 };
 
 function CartList({ cartItems, setCartItems }: CartListProps) {
@@ -46,44 +46,49 @@ function CartList({ cartItems, setCartItems }: CartListProps) {
 
   return (
     <CartLists>
-      {cartItems.map(({ id, name, imgSrc, price, count }: ItemType, idx: number) => {
-        return (
-          <CartItem key={id}>
-            <div className="img-wrap">
-              <img src={imgSrc} alt="" />
-            </div>
-            <div className="wrap">
-              <div className="desc-wrap">
-                <h3>{name}</h3>
-                <p>{(price * count).toLocaleString()}원</p>
+      {cartItems.map(
+        ({ id, name, imgSrc, price, count }: ItemType, idx: number) => {
+          return (
+            <CartItem key={id}>
+              <div className="img-wrap">
+                <img src={imgSrc} alt="" />
               </div>
-
-              <Check>
-                <div className="increase">
-                  <button
-                    className="decrease-btn"
-                    onClick={() => decreaseCartItem(idx)}
-                  >
-                    -
-                  </button>
-                  <div className="count">{count}</div>
-                  <button
-                    className="increase-btn"
-                    onClick={() => increaseCartItem(idx)}
-                  >
-                    +
-                  </button>
+              <div className="wrap">
+                <div className="desc-wrap">
+                  <h3>{name}</h3>
+                  <p>{(price * count).toLocaleString()}원</p>
                 </div>
-                <button type="button">
-                  <p className="remove-btn" onClick={() => deleteCartItem(idx)}>
-                    삭제하기
-                  </p>
-                </button>
-              </Check>
-            </div>
-          </CartItem>
-        );
-      })}
+
+                <Check>
+                  <div className="increase">
+                    <button
+                      className="decrease-btn"
+                      onClick={() => decreaseCartItem(idx)}
+                    >
+                      -
+                    </button>
+                    <div className="count">{count}</div>
+                    <button
+                      className="increase-btn"
+                      onClick={() => increaseCartItem(idx)}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button type="button">
+                    <p
+                      className="remove-btn"
+                      onClick={() => deleteCartItem(idx)}
+                    >
+                      삭제하기
+                    </p>
+                  </button>
+                </Check>
+              </div>
+            </CartItem>
+          );
+        },
+      )}
     </CartLists>
   );
 }

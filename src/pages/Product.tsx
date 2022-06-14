@@ -8,21 +8,20 @@ import InnerContainer from '../components/Layout';
 import Search from '../components/Search';
 import Filter from '../components/UI/Filter';
 
-
 type ProductProps = {
-  tatalProduct?: any,
-  productItems?: any,
-  cartItems?: any,
-  currentPage?: number,
-  setCartItems?: any,
-  setCurrentPage: (param: number) => void,
-  totalPage?: number,
-  firstNumber?: number,
-  lastNumber?: number,
-  next?: number,
-  prev?: number,
-  setOrder: (param: string) => void,
-  setAscending: (param: string) => void,
+  tatalProduct?: any;
+  productItems?: any;
+  cartItems?: any;
+  currentPage?: number;
+  setCartItems?: any;
+  setCurrentPage: (param: number) => void;
+  totalPage?: number;
+  firstNumber?: number;
+  lastNumber?: number;
+  next?: number;
+  prev?: number;
+  setOrder: (param: string) => void;
+  setAscending: (param: string) => void;
 };
 
 function Product({

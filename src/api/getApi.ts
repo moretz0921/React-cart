@@ -35,8 +35,8 @@ async function search(searchUrl: string) {
 }
 
 async function pagination(
-  order: string = 'createdAt',
-  ascending: string = 'asc',
+  order = 'createdAt',
+  ascending = 'asc',
   currentPage: number,
   limit: number
 ) {

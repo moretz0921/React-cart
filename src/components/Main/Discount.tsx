@@ -5,17 +5,17 @@ import { useInterval } from '../../hooks/useInterval';
 import theme from '../../styles/theme';
 
 function Discount() {
-  let dday = new Date('June 10, 2022, 24:00:00').getTime();
+  const dday = new Date('June 15, 2022, 24:00:00').getTime();
   const [currentHour, setCurrentHour] = useState<number>(Number);
   const [currentMin, setCurrentMin] = useState<number>(Number);
   const [currentSec, setCurrentSec] = useState<number>(Number);
 
   useInterval(() => {
-    let today = new Date().getTime();
-    let gap = dday - today;
-    let hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
-    let sec = Math.ceil((gap % (1000 * 60)) / 1000);
+    const today = new Date().getTime();
+    const gap = dday - today;
+    const hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+    const sec = Math.ceil((gap % (1000 * 60)) / 1000);
 
     setCurrentHour(hour);
     setCurrentMin(min);

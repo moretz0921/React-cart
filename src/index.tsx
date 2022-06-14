@@ -8,12 +8,14 @@ import { Provider } from 'react-redux';
 import { legacy_createStore } from 'redux';
 import rootReducer from './store';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import ErrorBoundary from './utils/ErrorBoundary';
+import ErrorBoundary from './utils/ErrorBoundary.js';
 import { QueryClientProvider, QueryClient } from 'react-query';
 
 const queryClient = new QueryClient();
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement,
+);
 root.render(
   <React.StrictMode>
     <GlobalStyle />
@@ -27,7 +29,7 @@ root.render(
         </BrowserRouter>
       </QueryClientProvider>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

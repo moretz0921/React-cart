@@ -1,10 +1,11 @@
+import React from 'react';
 import styled from 'styled-components';
 
 type ItemProps = {
-  src?: string,
-  active?: boolean,
-  prev?: boolean,
-  next?: boolean,
+  src?: string;
+  active?: boolean;
+  prev?: boolean;
+  next?: boolean;
 };
 
 function Item({ src, active, prev, next }: ItemProps) {

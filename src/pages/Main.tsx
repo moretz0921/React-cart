@@ -7,7 +7,7 @@ import Banner from '../components/UI/Banner';
 import InnerWrap from '../components/Layout';
 
 type MainProps = {
-  productItems?: any
+  productItems?: any;
 };
 
 function Main({ productItems }: MainProps) {
