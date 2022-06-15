@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import '../firebase';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 function Login() {
+  const emailInputRef = useRef<HTMLInputElement>(null);
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [emailError, setEmailError] = useState<string>('');
   const [error, setError] = useState<string>('');
 
   const onEmailHandler = (e: any) => {
@@ -43,6 +45,12 @@ function Login() {
     }, 3000);
   }, [error]);
 
+  useEffect(() => {
+    if (emailInputRef.current !== null) {
+      emailInputRef.current.focus();
+    } 
+  }, [])
+
   return (
     <>
       <LoginWrap>
@@ -55,6 +63,7 @@ function Login() {
               placeholder="이메일을 입력해주세요"
               value={email}
               onChange={onEmailHandler}
+              ref={emailInputRef}
             ></input>
           </IdWrap>
 
@@ -67,6 +76,9 @@ function Login() {
               onChange={onPasswordHandler}
             ></input>
           </PwWrap>
+
+          
+          <div className="error">{error}</div>
 
           <SubmitWrap>
             <button type="submit" className="btn-signin" onClick={handleSubmit}>
@@ -99,6 +111,13 @@ const LoginWrap = styled.div`
     font-size: 20px;
     line-height: 20px;
     text-align: center;
+  }
+
+  .error {
+    margin-bottom: 20px;
+    padding-left: 5px;
+    color: rgb(233, 78, 88);
+    font-size: 12px;
   }
 `;
 

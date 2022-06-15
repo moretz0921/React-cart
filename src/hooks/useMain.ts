@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import { pagination } from '../api/getApi';
+import { pagination } from 'api/getApi';
 
 export function useMain(
   orderQuery: string,

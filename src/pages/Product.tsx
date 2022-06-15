@@ -1,16 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
+import { IgetProductResponse, Ascending, Order} from 'types';
 
-import ProductList from '../components/Product/ProductList';
-import Pagination from '../components/UI/Pagination';
-import InnerContainer from '../components/Layout';
-import Search from '../components/Search';
-import Filter from '../components/UI/Filter';
+import ProductList from 'components/Product/ProductList';
+import Pagination from 'components/UI/Pagination';
+import InnerContainer from 'components/Layout';
+import Search from 'components/Search';
+import Filter from 'components/UI/Filter';
+
 
 type ProductProps = {
   tatalProduct?: any;
-  productItems?: any;
+  productItems?: IgetProductResponse | [];
   cartItems?: any;
   currentPage?: number;
   setCartItems?: any;
@@ -20,8 +22,8 @@ type ProductProps = {
   lastNumber?: number;
   next?: number;
   prev?: number;
-  setOrder: (param: string) => void;
-  setAscending: (param: string) => void;
+  setOrder: (param: Order) => void;
+  setAscending: (param: Ascending) => void;
 };
 
 function Product({

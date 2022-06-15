@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import CartList from '../components/Cart/CartList';
-import InnerContainer from '../components/Layout';
+import CartList from 'components/Cart/CartList';
+import InnerContainer from 'components/Layout';
 
 type CartProps = {
   cartItems?: any;

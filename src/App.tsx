@@ -4,7 +4,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearUser, setUser } from './store/userReducer';
 import { getProductList, pagination } from './api/getApi';
-import {IgetProductResponse} from './types'
+import { IgetProductResponse, Order, Ascending } from './types'
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -28,8 +28,8 @@ function App() {
   const [cartItems, setCartItems] = useState(initialCartItem);
 
   const [tatalProduct, setTotalProduct] = useState<IgetProductResponse | []>([]);
-  const [order, setOrder] = useState<string>('createdAt');
-  const [ascending, setAscending] = useState<string>('asc');
+  const [order, setOrder] = useState<Order>('createdAt');
+  const [ascending, setAscending] = useState<Ascending>('asc');
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [limit, setLimit] = useState<number>(8);
 

@@ -20,3 +20,15 @@ export interface IProductTab {
   title: string
   imgSrc: string
 }
+
+
+export type Order = 'createdAt' | 'likeCount' | 'price';
+export type Ascending = 'asc' | 'desc';
+
+
+export interface IPaginationParams {
+  order: Order;
+  ascending: Ascending;
+  currentPage: number;
+  limit: number;
+}

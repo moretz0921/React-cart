@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import theme from '../../styles/theme';
-import BannerImage from '../../assets/images/banner.png';
+import theme from 'styles/theme';
+import BannerImage from 'assets/images/banner.png';
 
 function Banner() {
   return (

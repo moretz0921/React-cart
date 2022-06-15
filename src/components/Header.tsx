@@ -2,13 +2,13 @@ import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Logo from '../assets/images/logo.png';
+import Logo from 'assets/images/logo.png';
 import '../firebase';
 import { signOut, getAuth } from 'firebase/auth';
-import theme from '../styles/theme';
+import theme from 'styles/theme';
 
-import CartImg from '../assets/images/cart.svg';
-import AddressImg from '../assets/images/adress.svg';
+import CartImg from 'assets/images/cart.svg';
+import AddressImg from 'assets/images/adress.svg';
 import SearchInput from './UI/SearchInput';
 
 type HeaderProps = {

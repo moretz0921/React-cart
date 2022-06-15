@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import '../firebase';
@@ -9,7 +9,7 @@ import {
 } from 'firebase/auth';
 import { getDatabase, ref, set } from 'firebase/database';
 import { useDispatch } from 'react-redux';
-import { setUser } from '../store/userReducer';
+import { setUser } from 'store/userReducer';
 
 const IsPasswordValid = (password: any, confirmPassword: any) => {
   if (password.length < 6 || confirmPassword.length < 6) {
@@ -20,6 +20,7 @@ const IsPasswordValid = (password: any, confirmPassword: any) => {
 };
 
 function Join() {
+  const emailInputRef = useRef<HTMLInputElement>(null);
   const dispatch = useDispatch();
   const [error, setError] = useState<string>('');
   const [nickname, setNickname] = useState<string>('');
@@ -86,6 +87,12 @@ function Join() {
     }, 3000);
   }, [error]);
 
+  useEffect(() => {
+    if (emailInputRef.current !== null) {
+      emailInputRef.current.focus();
+    } 
+  }, [])
+
   return (
     <>
       <Login>
@@ -98,7 +105,8 @@ function Join() {
               placeholder="닉네임을 입력해주세요"
               value={nickname}
               onChange={onNicknameHandler}
-            ></input>
+              ref={emailInputRef}
+            />
           </IdWrap>
 
           <IdWrap>
@@ -131,6 +139,8 @@ function Join() {
             ></input>
           </PwWrap>
 
+          <div className="error">{error}</div>
+
           <SubmitWrap>
             <button type="submit" className="btn-signin" onClick={handleSubmit}>
               <span>회원가입</span>
@@ -162,6 +172,13 @@ const Login = styled.div`
     font-size: 20px;
     line-height: 20px;
     text-align: center;
+  }
+
+  .error {
+    margin-bottom: 20px;
+    padding-left: 5px;
+    color: rgb(233, 78, 88);
+    font-size: 12px;
   }
 `;
 

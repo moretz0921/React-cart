@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Order, Ascending} from 'types'
 
 type FilterProps = {
-  setOrder: (param: string) => void;
-  setAscending: (param: string) => void;
+  setOrder: (param: Order) => void;
+  setAscending: (param: Ascending) => void;
 };
 
 function Filter({ setOrder, setAscending }: FilterProps) {

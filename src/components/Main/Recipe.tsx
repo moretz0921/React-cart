@@ -4,7 +4,7 @@ import ReactSlider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
-import theme from '../../styles/theme';
+import theme from 'styles/theme';
 
 type MainProps = {
   productItems?: any;

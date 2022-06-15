@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import ScrollTop from '../assets/images/btn-scroll-top.svg';
+import ScrollTop from 'assets/images/btn-scroll-top.svg';
 import InnerContainer from './Layout';
 
 function Footer() {

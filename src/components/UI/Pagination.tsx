@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import PrevImg from '../../assets/images/prev.svg';
-import NextImg from '../../assets/images/next.svg';
-import theme from '../../styles/theme';
+import PrevImg from 'assets/images/prev.svg';
+import NextImg from 'assets/images/next.svg';
+import theme from 'styles/theme';
 
 type PaginationProps = {
   currentPage?: number;

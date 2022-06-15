@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import DisCountImg from '../../assets/images/discount.jpg';
-import { useInterval } from '../../hooks/useInterval';
-import theme from '../../styles/theme';
+import DisCountImg from 'assets/images/discount.jpg';
+import { useInterval } from 'hooks/useInterval';
+import theme from 'styles/theme';
 
 function Discount() {
   const dday = new Date('June 15, 2022, 24:00:00').getTime();

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
-import { useSearch } from '../hooks/useSearch';
+import { useSearch } from 'hooks/useSearch';
 import InnerContainer from './Layout';
 
 function Search() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import InnerWrap from '../components/Layout';
-import HeartIcon from '../assets/images/mypage-like.svg';
+import InnerWrap from 'components/Layout';
+import HeartIcon from 'assets/images/mypage-like.svg';
 
 function MyPage() {
   return (

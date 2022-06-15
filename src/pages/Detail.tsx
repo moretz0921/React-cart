@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import InnerContainer from '../components/Layout';
-import Tab from '../components/UI/Tab';
-import { useDetail } from '../hooks/useDetail';
+import InnerContainer from 'components/Layout';
+import Tab from 'components/UI/Tab';
+import { useDetail } from 'hooks/useDetail';
 
-import HeartIcon from '../assets/images/detail_like.svg';
-import HeartIconActive from '../assets/images/detail_like_on.svg';
+import HeartIcon from 'assets/images/detail_like.svg';
+import HeartIconActive from 'assets/images/detail_like_on.svg';
 
 function Detail() {
   const publicUrl = process.env.PUBLIC_URL;

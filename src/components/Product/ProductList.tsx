@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-import CartIcon from '../../assets/images/product_cart.svg';
-import theme from '../../styles/theme';
+import CartIcon from 'assets/images/product_cart.svg';
+import theme from 'styles/theme';
 import Modal from '../UI/Modal';
 
 type ProductListProps = {
