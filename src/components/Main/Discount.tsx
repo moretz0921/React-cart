@@ -5,7 +5,7 @@ import { useInterval } from 'hooks/useInterval';
 import theme from 'styles/theme';
 
 function Discount() {
-  const dday = new Date('June 15, 2022, 24:00:00').getTime();
+  const dday = new Date('December 07, 2022, 24:00:00').getTime();
   const [currentHour, setCurrentHour] = useState<number>(Number);
   const [currentMin, setCurrentMin] = useState<number>(Number);
   const [currentSec, setCurrentSec] = useState<number>(Number);

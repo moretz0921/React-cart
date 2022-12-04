@@ -1,9 +1,10 @@
 import axios from 'axios';
 
 const httpClient = axios.create({
-  baseURL: 'http://localhost:8800', //https://cart-server-app.herokuapp.com
+  baseURL: 'https://cart-server-app.herokuapp.com', //https://cart-server-app.herokuapp.com
 });
 
+// http://localhost:8800
 
 async function getProductList() {
   const res = await httpClient.get('/product');
