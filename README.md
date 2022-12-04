@@ -2,7 +2,6 @@
 - React 18
 - Styled-component
 - Redux
-- react-query
 - firebase
 - json-server
 
